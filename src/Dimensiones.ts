@@ -6,20 +6,20 @@ enum EstadoDimensiones {
 
 export class Dimensiones {
   // hay que hacer un regex para la id para llamarla en el constructor
-  private readonly ID_Dimension: String; // Ej: C-137, J19ζ7, C-500A
+  private readonly ID_Dimension: string; // Ej: C-137, J19ζ7, C-500A
   private nombre: string;
   private estado: EstadoDimensiones;
   private lvl_tecnologico: number;
   private descripcion: string;
 
-  //getters
-  getID(): String {return this.ID_Dimension;}
-  getNombre(): string {return this.nombre;}
-  getEstado(): EstadoDimensiones {return this.estado;}
-  getLvlTecnologico(): number {return this.lvl_tecnologico;}
-  getDescripcion(): string {return this.descripcion;}
+  // Getters
+  getID(): string { return this.ID_Dimension; }
+  getNombre(): string { return this.nombre; }
+  getEstado(): EstadoDimensiones { return this.estado; }
+  getLvlTecnologico(): number { return this.lvl_tecnologico; }
+  getDescripcion(): string { return this.descripcion; }
 
-  //validadores
+  // Validadores
   validarID(ID_Dimension: string): string {
     // Implement regex validation for ID_Dimension
     return ID_Dimension;
@@ -27,7 +27,7 @@ export class Dimensiones {
 
   validaNombre(nombre: string): string {
     if (nombre === '') {
-      throw new Error("El nombre no puede estar vacio");
+      throw new Error("El nombre no puede estar vacío");
     }
     return nombre;
   }
@@ -42,19 +42,19 @@ export class Dimensiones {
 
   validarLvl(lvl: number): number {
     if (lvl < 1 || lvl > 10) {
-      throw new Error("El nivel tecnologico tiene que estar entre 1 y 10");
+      throw new Error("El nivel tecnológico tiene que estar entre 1 y 10");
     }
     return lvl;
   }
 
   validarDescripcion(descripcion: string): string {
     if (descripcion.trim() === '') {
-      throw new Error("La descripcion no puede estar vacia");
+      throw new Error("La descripción no puede estar vacia");
     }
     return descripcion;
   }
 
-  //setters
+  // Setters
   setNombre(nombre: string): void {
     this.nombre = this.validaNombre(nombre);
   }
@@ -71,8 +71,8 @@ export class Dimensiones {
     this.descripcion = this.validarDescripcion(descripcion);
   }
 
-  //constructor
-  constructor(ID_Dimension: String, nombre: string, estado: EstadoDimensiones, lvl_tecnologico: number, descripcion: string) {
+  // Constructor
+  constructor(ID_Dimension: string, nombre: string, estado: EstadoDimensiones, lvl_tecnologico: number, descripcion: string) {
     this.ID_Dimension = this.validarID(ID_Dimension);
     this.nombre = this.validaNombre(nombre);
     this.estado = this.validarEstado(estado);
