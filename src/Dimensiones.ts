@@ -1,82 +1,43 @@
+import { AtributosComunes } from "./AtributosComunes";
+
 enum EstadoDimensiones {
   ACTIVA = "activa",
   DESTRUIDA = "destruida",
   CUARENTENA = "cuarentena"
 }
 
-export class Dimensiones {
-  // hay que hacer un regex para la id para llamarla en el constructor
-  private readonly ID_Dimension: string; // Ej: C-137, J19ζ7, C-500A
-  private nombre: string;
+export class Dimensiones extends AtributosComunes {
   private estado: EstadoDimensiones;
-  private lvl_tecnologico: number;
-  private descripcion: string;
+  private nivelTec: number;
+
+  constructor(id: string, nombre: string, estado: EstadoDimensiones, nivelTec: number, descripcion: string) {
+    super(id, nombre, descripcion);
+    this.estado = this.comprobarEstado(estado);
+    this.nivelTec = this.comprobarNivelTec(nivelTec);
+  }
 
   // Getters
-  getID(): string { return this.ID_Dimension; }
-  getNombre(): string { return this.nombre; }
   getEstado(): EstadoDimensiones { return this.estado; }
-  getLvlTecnologico(): number { return this.lvl_tecnologico; }
-  getDescripcion(): string { return this.descripcion; }
+  getNivelTec(): number { return this.nivelTec; }
 
-  // Validadores
-  validarID(ID_Dimension: string): string {
-    // Implement regex validation for ID_Dimension
-    return ID_Dimension;
-  }
+  // Setters
+  setEstado(estado: EstadoDimensiones) { this.estado = estado; }
+  setLvlTecnologico(nivelTec: number) { this.nivelTec = this.comprobarNivelTec(nivelTec); }
 
-  validaNombre(nombre: string): string {
-    if (nombre === '') {
-      throw new Error("El nombre no puede estar vacío");
-    }
-    return nombre;
-  }
-
-  validarEstado(estado: string): EstadoDimensiones {
+  // Comprobaciones
+  comprobarEstado(estado: string): EstadoDimensiones {
     if (estado === "activa" || estado === "destruida" || estado === "cuarentena") {
       return estado as EstadoDimensiones;
     } else {
-      throw new Error("El estado solo puede ser activa/destruida/cuarentena");
+      throw new Error("El estado de la dimensión sólo puede ser activa/destruida/cuarentena");
     }
   }
 
-  validarLvl(lvl: number): number {
-    if (lvl < 1 || lvl > 10) {
+  comprobarNivelTec(nivel: number): number {
+    if (nivel < 1 || nivel > 10) {
       throw new Error("El nivel tecnológico tiene que estar entre 1 y 10");
+    } else {
+      return nivel;
     }
-    return lvl;
-  }
-
-  validarDescripcion(descripcion: string): string {
-    if (descripcion.trim() === '') {
-      throw new Error("La descripción no puede estar vacia");
-    }
-    return descripcion;
-  }
-
-  // Setters
-  setNombre(nombre: string): void {
-    this.nombre = this.validaNombre(nombre);
-  }
-
-  setEstado(estado: EstadoDimensiones): void {
-    this.estado = estado;
-  }
-
-  setLvlTecnologico(lvl_tecnologico: number): void {
-    this.lvl_tecnologico = this.validarLvl(lvl_tecnologico);
-  }
-
-  setDescripcion(descripcion: string): void {
-    this.descripcion = this.validarDescripcion(descripcion);
-  }
-
-  // Constructor
-  constructor(ID_Dimension: string, nombre: string, estado: EstadoDimensiones, lvl_tecnologico: number, descripcion: string) {
-    this.ID_Dimension = this.validarID(ID_Dimension);
-    this.nombre = this.validaNombre(nombre);
-    this.estado = this.validarEstado(estado);
-    this.lvl_tecnologico = this.validarLvl(lvl_tecnologico);
-    this.descripcion = this.validarDescripcion(descripcion);
   }
 }
