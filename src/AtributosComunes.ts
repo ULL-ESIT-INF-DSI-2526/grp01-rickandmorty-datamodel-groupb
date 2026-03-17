@@ -1,7 +1,7 @@
 export class AtributosComunes {
-  protected readonly id: string;
-  protected nombre: string;
-  protected descripcion: string;
+  private readonly id: string;
+  private nombre: string;
+  private descripcion: string;
 
   constructor(id: string, nombre: string, descripcion: string) {
     this.id = this.comprobarVacio(id);
