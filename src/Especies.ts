@@ -1,14 +1,22 @@
 import { AtributosComunes } from "./AtributosComunes";
 
+enum TipoEspecie {
+  HUMANOIDE = "humanoide",
+  AMORFO = "amorfo",
+  ROBOTICO = "robotico",
+  PARASITO = "parasito",
+  HIVEMIND = "hivemind"
+}
+
 export class Especies extends AtributosComunes {
   private origen: string;
-  private tipo: string;
+  private tipo: TipoEspecie;
   private esperanzaVida: number;
 
-  constructor(id: string, nombre: string, origen: string, tipo: string, esperanzaVida: number, descripcion: string) {
+  constructor(id: string, nombre: string, origen: string, tipo: TipoEspecie, esperanzaVida: number, descripcion: string) {
     super(id, nombre, descripcion);
     this.origen = this.comprobarVacio(origen);
-    this.tipo = this.comprobarVacio(tipo);
+    this.tipo = tipo;
     this.esperanzaVida = this.comprobarEsperanzaVida(esperanzaVida);
   }
 
@@ -19,7 +27,7 @@ export class Especies extends AtributosComunes {
 
   // Setters
   setOrigen(origen: string) { this.origen = this.comprobarVacio(origen); }
-  setTipo(tipo: string) { this.tipo = this.comprobarVacio(tipo); }
+  setTipo(tipo: TipoEspecie) { this.tipo = tipo; }
   setEsperanzaVida(esperanzaVida: number) { this.esperanzaVida = this.comprobarEsperanzaVida(esperanzaVida); }
 
   // Comprobaciones
