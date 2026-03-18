@@ -18,6 +18,13 @@ export class GestorMultiverso {
   getDimensiones(): Dimensiones[] { return this.dimensiones; }
   getPersonajes(): Personajes[] { return this.personajes; }
   getEspecies(): Especies[] { return this.especies; }
-  getPlanetasLocalizaciones(): 
+  getPlanetasLocalizaciones(): PlanetasLocalizaciones[] { return this.planetasLocalizaciones; }
+  getInventosArtefactos(): InventosArtefactos[] { return this.inventosArtefactos; }
 
+  // Añadir datos
+  pushDimension(nuevaDimension: Dimensiones) { this.dimensiones.push(nuevaDimension); }
+  pushPersonaje(nuevoPersonaje: Personajes) { this.personajes.push(nuevoPersonaje); }
+  pushEspecie(nuevaEspecie: Especies) { this.especies.push(nuevaEspecie); }
+  pushPlanetaLocalizacion(nuevoPlanetaLocalizacion: PlanetasLocalizaciones) { this.planetasLocalizaciones.push(nuevoPlanetaLocalizacion); }
+  pushInventosArtefactos(nuevoInventoArtefacto: InventosArtefactos) { this.inventosArtefactos.push(nuevoInventoArtefacto); }
 }
