@@ -1,0 +1,757 @@
+{
+	"dimensiones": [
+		{
+			"id": "dim-c137",
+			"nombre": "Dimension C-137",
+			"estado": "activa",
+			"nivelTec": 10,
+			"descripcion": "Dimension principal del Rick original"
+		},
+		{
+			"id": "dim-35c",
+			"nombre": "Dimension 35-C",
+			"estado": "activa",
+			"nivelTec": 8,
+			"descripcion": "Linea alternativa estable con alto desarrollo cientifico"
+		},
+		{
+			"id": "dim-j19z7",
+			"nombre": "Dimension J19-zeta-7",
+			"estado": "cuarentena",
+			"nivelTec": 7,
+			"descripcion": "Region aislada por eventos memeticos"
+		},
+		{
+			"id": "dim-evil-rick",
+			"nombre": "Dimension Evil-R",
+			"estado": "destruida",
+			"nivelTec": 9,
+			"descripcion": "Universo colapsado tras guerra entre Ricks"
+		},
+		{
+			"id": "dim-chair",
+			"nombre": "Dimension Chair-Prime",
+			"estado": "activa",
+			"nivelTec": 6,
+			"descripcion": "Sociedad donde los humanos evolucionaron con morfologia de silla"
+		},
+		{
+			"id": "dim-doofus",
+			"nombre": "Dimension Doofus",
+			"estado": "activa",
+			"nivelTec": 5,
+			"descripcion": "Mundo relativamente pacifico con baja conflictividad"
+		},
+		{
+			"id": "dim-cronenberg",
+			"nombre": "Dimension Cronenberg",
+			"estado": "cuarentena",
+			"nivelTec": 4,
+			"descripcion": "Universo mutado por errores biologicos irreversibles"
+		},
+		{
+			"id": "dim-fascist",
+			"nombre": "Dimension F-Alpha",
+			"estado": "destruida",
+			"nivelTec": 7,
+			"descripcion": "Regimen autoritario extinto tras revuelta masiva"
+		},
+		{
+			"id": "dim-post-apoc",
+			"nombre": "Dimension Post-Apoc",
+			"estado": "activa",
+			"nivelTec": 3,
+			"descripcion": "Restos de civilizacion adaptados a escasez extrema"
+		},
+		{
+			"id": "dim-oceanic",
+			"nombre": "Dimension Oceanic-9",
+			"estado": "activa",
+			"nivelTec": 4,
+			"descripcion": "Planetas acuaticos con redes de conciencia colectiva"
+		},
+		{
+			"id": "dim-gazorpazorp",
+			"nombre": "Dimension Gazorpazorp",
+			"estado": "activa",
+			"nivelTec": 6,
+			"descripcion": "Confederacion de clanes con tecnologia militar modular"
+		},
+		{
+			"id": "dim-purge",
+			"nombre": "Dimension Purge",
+			"estado": "activa",
+			"nivelTec": 5,
+			"descripcion": "Ciclo social anual de violencia organizada"
+		},
+		{
+			"id": "dim-microverse",
+			"nombre": "Dimension Microverse",
+			"estado": "activa",
+			"nivelTec": 9,
+			"descripcion": "Microcivilizaciones usadas como fuente energetica"
+		},
+		{
+			"id": "dim-snake",
+			"nombre": "Dimension Snake",
+			"estado": "cuarentena",
+			"nivelTec": 2,
+			"descripcion": "Linea temporal con conflictos cronologicos reptilianos"
+		},
+		{
+			"id": "dim-arcade",
+			"nombre": "Dimension Arcade",
+			"estado": "activa",
+			"nivelTec": 1,
+			"descripcion": "Realidad gamificada con fisicas simplificadas"
+		}
+	],
+	"especies": [
+		{
+			"id": "esp-human",
+			"nombre": "Humano",
+			"origen": "Tierra",
+			"tipo": "organico",
+			"esperanzaVida": 80,
+			"descripcion": "Especie dominante en gran parte del multiverso"
+		},
+		{
+			"id": "esp-meeseeks",
+			"nombre": "Meeseeks",
+			"origen": "Caja Meeseeks",
+			"tipo": "existencia breve",
+			"esperanzaVida": 1,
+			"descripcion": "Entidades invocadas para cumplir una tarea concreta"
+		},
+		{
+			"id": "esp-gazorpiano",
+			"nombre": "Gazorpiano",
+			"origen": "Gazorpazorp",
+			"tipo": "organico",
+			"esperanzaVida": 45,
+			"descripcion": "Especie tribal con castas y fuerte agresividad"
+		},
+		{
+			"id": "esp-cronenberg",
+			"nombre": "Cronenberg",
+			"origen": "Mutacion de humanos",
+			"tipo": "mutante",
+			"esperanzaVida": 20,
+			"descripcion": "Organismos alterados por compuestos inestables"
+		},
+		{
+			"id": "esp-birdperson",
+			"nombre": "Birdperson",
+			"origen": "Bird World",
+			"tipo": "avian-humanoide",
+			"esperanzaVida": 120,
+			"descripcion": "Guerreros alados con codigos de honor estrictos"
+		},
+		{
+			"id": "esp-plutoniano",
+			"nombre": "Plutoniano",
+			"origen": "Pluton",
+			"tipo": "organico",
+			"esperanzaVida": 150,
+			"descripcion": "Especie longeva con cultura cortesana"
+		},
+		{
+			"id": "esp-traflorkiano",
+			"nombre": "Traflorkiano",
+			"origen": "Traflork Prime",
+			"tipo": "organico",
+			"esperanzaVida": 95,
+			"descripcion": "Civilizacion militarizada con estrategias de asedio"
+		},
+		{
+			"id": "esp-snake",
+			"nombre": "Snake People",
+			"origen": "Serpentis",
+			"tipo": "reptiliano",
+			"esperanzaVida": 60,
+			"descripcion": "Sociedad reptiliana con tecnologia temporal rudimentaria"
+		},
+		{
+			"id": "esp-robot",
+			"nombre": "Robot Sintetico",
+			"origen": "Fabricacion artificial",
+			"tipo": "mecanico",
+			"esperanzaVida": 300,
+			"descripcion": "Unidades mecanicas capaces de emular identidad organica"
+		},
+		{
+			"id": "esp-hivemind",
+			"nombre": "Hivemind Oceanico",
+			"origen": "Oceanic-9",
+			"tipo": "colectivo",
+			"esperanzaVida": 200,
+			"descripcion": "Conciencia distribuida entre millones de organismos"
+		}
+	],
+	"personajes": [
+		{
+			"id": "per-rick-c137",
+			"nombre": "Rick Sanchez C-137",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-c137",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 10,
+			"descripcion": "Cientifico brillante y extremadamente peligroso"
+		},
+		{
+			"id": "per-morty-c137",
+			"nombre": "Morty Smith C-137",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-c137",
+			"estado": "vivo",
+			"afiliacion": "familia smith",
+			"nivelInteligencia": 5,
+			"descripcion": "Nieto de Rick con alta tolerancia al caos"
+		},
+		{
+			"id": "per-summer-c137",
+			"nombre": "Summer Smith C-137",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-c137",
+			"estado": "vivo",
+			"afiliacion": "familia smith",
+			"nivelInteligencia": 6,
+			"descripcion": "Estratega pragmatica en crisis interdimensionales"
+		},
+		{
+			"id": "per-beth-c137",
+			"nombre": "Beth Smith C-137",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-c137",
+			"estado": "vivo",
+			"afiliacion": "familia smith",
+			"nivelInteligencia": 7,
+			"descripcion": "Cirujana con perfil de liderazgo marcado"
+		},
+		{
+			"id": "per-jerry-c137",
+			"nombre": "Jerry Smith C-137",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-c137",
+			"estado": "vivo",
+			"afiliacion": "familia smith",
+			"nivelInteligencia": 4,
+			"descripcion": "Superviviente accidental en misiones de alto riesgo"
+		},
+		{
+			"id": "per-rick-35c",
+			"nombre": "Rick Sanchez 35-C",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-35c",
+			"estado": "vivo",
+			"afiliacion": "consejo de ricks",
+			"nivelInteligencia": 9,
+			"descripcion": "Rick diplomatico especializado en tratados multiversales"
+		},
+		{
+			"id": "per-morty-35c",
+			"nombre": "Morty Smith 35-C",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-35c",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 5,
+			"descripcion": "Morty alternativo con entrenamiento tactico"
+		},
+		{
+			"id": "per-rick-doofus",
+			"nombre": "Doofus Rick",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-doofus",
+			"estado": "vivo",
+			"afiliacion": "consejo de ricks",
+			"nivelInteligencia": 8,
+			"descripcion": "Version amable con enfoque en ciencia aplicada"
+		},
+		{
+			"id": "per-rick-fascist",
+			"nombre": "Fascist Rick",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-fascist",
+			"estado": "muerto",
+			"afiliacion": "consejo de ricks",
+			"nivelInteligencia": 8,
+			"descripcion": "Rick de regimen caido tras conflicto interno"
+		},
+		{
+			"id": "per-evil-morty",
+			"nombre": "Evil Morty",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-evil-rick",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 9,
+			"descripcion": "Morty estratega con agenda propia"
+		},
+		{
+			"id": "per-rick-chair",
+			"nombre": "Chair Rick",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-chair",
+			"estado": "desconocido",
+			"afiliacion": "consejo de ricks",
+			"nivelInteligencia": 9,
+			"descripcion": "Version antropomorfica con laboratorio ergonomico"
+		},
+		{
+			"id": "per-morty-chair",
+			"nombre": "Chair Morty",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-chair",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 4,
+			"descripcion": "Morty alternativo experto en logistica"
+		},
+		{
+			"id": "per-rick-micro",
+			"nombre": "Rick Microverse",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-microverse",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 10,
+			"descripcion": "Investigador centrado en estructuras energeticas"
+		},
+		{
+			"id": "per-morty-micro",
+			"nombre": "Morty Microverse",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-microverse",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 6,
+			"descripcion": "Morty tecnico con perfil analitico"
+		},
+		{
+			"id": "per-rick-snake",
+			"nombre": "Snake Rick",
+			"especieId": "esp-snake",
+			"dimensionOrigenId": "dim-snake",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 8,
+			"descripcion": "Cientifico reptiliano especializado en cronotecnologia"
+		},
+		{
+			"id": "per-morty-snake",
+			"nombre": "Snake Morty",
+			"especieId": "esp-snake",
+			"dimensionOrigenId": "dim-snake",
+			"estado": "muerto",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 3,
+			"descripcion": "Version juvenil atrapada en guerras temporales"
+		},
+		{
+			"id": "per-king-gazorp",
+			"nombre": "King Gazorp",
+			"especieId": "esp-gazorpiano",
+			"dimensionOrigenId": "dim-gazorpazorp",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 6,
+			"descripcion": "Lider marcial de los clanes superiores"
+		},
+		{
+			"id": "per-princess-gazorp",
+			"nombre": "Princess Gazorp",
+			"especieId": "esp-gazorpiano",
+			"dimensionOrigenId": "dim-gazorpazorp",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 7,
+			"descripcion": "Diplomatica y comandante de defensa orbital"
+		},
+		{
+			"id": "per-birdperson-prime",
+			"nombre": "Birdperson Prime",
+			"especieId": "esp-birdperson",
+			"dimensionOrigenId": "dim-c137",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 8,
+			"descripcion": "Aliado veterano en conflictos galacticos"
+		},
+		{
+			"id": "per-phoenixperson",
+			"nombre": "Phoenixperson",
+			"especieId": "esp-robot",
+			"dimensionOrigenId": "dim-c137",
+			"estado": "robot-sustituto",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 7,
+			"descripcion": "Reconstruccion cibernetica con protocolos de combate"
+		},
+		{
+			"id": "per-meeseeks-alpha",
+			"nombre": "Mr. Meeseeks Alpha",
+			"especieId": "esp-meeseeks",
+			"dimensionOrigenId": "dim-j19z7",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 4,
+			"descripcion": "Unidad de apoyo para tareas complejas"
+		},
+		{
+			"id": "per-meeseeks-beta",
+			"nombre": "Mr. Meeseeks Beta",
+			"especieId": "esp-meeseeks",
+			"dimensionOrigenId": "dim-j19z7",
+			"estado": "muerto",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 3,
+			"descripcion": "Instancia colapsada por conflicto de objetivos"
+		},
+		{
+			"id": "per-cronenberg-rick",
+			"nombre": "Cronenberg Rick",
+			"especieId": "esp-cronenberg",
+			"dimensionOrigenId": "dim-cronenberg",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 7,
+			"descripcion": "Cientifico mutado enfocado en bioingenieria"
+		},
+		{
+			"id": "per-cronenberg-morty",
+			"nombre": "Cronenberg Morty",
+			"especieId": "esp-cronenberg",
+			"dimensionOrigenId": "dim-cronenberg",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 5,
+			"descripcion": "Explorador adaptado a ambientes toxicos"
+		},
+		{
+			"id": "per-pluto-elder",
+			"nombre": "Pluto Elder",
+			"especieId": "esp-plutoniano",
+			"dimensionOrigenId": "dim-post-apoc",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 6,
+			"descripcion": "Consejero ancestral de ciudades subterraneas"
+		},
+		{
+			"id": "per-traflork-general",
+			"nombre": "Traflork General",
+			"especieId": "esp-traflorkiano",
+			"dimensionOrigenId": "dim-purge",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 7,
+			"descripcion": "Comandante de operaciones de frontera"
+		},
+		{
+			"id": "per-hive-queen",
+			"nombre": "Hive Queen",
+			"especieId": "esp-hivemind",
+			"dimensionOrigenId": "dim-oceanic",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 9,
+			"descripcion": "Nodo central de conciencia oceanica"
+		},
+		{
+			"id": "per-rick-arcade",
+			"nombre": "Rick Arcade",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-arcade",
+			"estado": "vivo",
+			"afiliacion": "consejo de ricks",
+			"nivelInteligencia": 7,
+			"descripcion": "Rick especializado en simulaciones ludicas"
+		},
+		{
+			"id": "per-morty-arcade",
+			"nombre": "Morty Arcade",
+			"especieId": "esp-human",
+			"dimensionOrigenId": "dim-arcade",
+			"estado": "vivo",
+			"afiliacion": "independiente",
+			"nivelInteligencia": 4,
+			"descripcion": "Morty con reflejos mejorados por simulacion"
+		},
+		{
+			"id": "per-jerry-robot",
+			"nombre": "Jerry Robot",
+			"especieId": "esp-robot",
+			"dimensionOrigenId": "dim-c137",
+			"estado": "robot-sustituto",
+			"afiliacion": "familia smith",
+			"nivelInteligencia": 2,
+			"descripcion": "Sustituto sintetico para contingencias familiares"
+		}
+	],
+	"inventos": [
+		{
+			"id": "inv-portal-gun",
+			"nombre": "Pistola de Portales",
+			"inventorId": "per-rick-c137",
+			"dimensionId": "dim-c137",
+			"nivelPeligro": 9,
+			"descripcion": "Dispositivo para viajar entre dimensiones"
+		},
+		{
+			"id": "inv-microverse-battery",
+			"nombre": "Bateria Microverse",
+			"inventorId": "per-rick-c137",
+			"dimensionId": "dim-microverse",
+			"nivelPeligro": 10,
+			"descripcion": "Fuente energetica basada en civilizaciones miniaturizadas"
+		},
+		{
+			"id": "inv-time-crystal-core",
+			"nombre": "Nucleo de Cristal Temporal",
+			"inventorId": "per-rick-35c",
+			"dimensionId": "dim-35c",
+			"nivelPeligro": 8,
+			"descripcion": "Estabilizador para saltos en lineas de tiempo inestables"
+		},
+		{
+			"id": "inv-neutrino-bomb",
+			"nombre": "Bomba de Neutrinos",
+			"inventorId": "per-rick-fascist",
+			"dimensionId": "dim-fascist",
+			"nivelPeligro": 10,
+			"descripcion": "Artefacto de aniquilacion de gran escala"
+		},
+		{
+			"id": "inv-meeseeks-box",
+			"nombre": "Caja Meeseeks",
+			"inventorId": "per-rick-c137",
+			"dimensionId": "dim-j19z7",
+			"nivelPeligro": 7,
+			"descripcion": "Generador de entidades de asistencia temporal"
+		},
+		{
+			"id": "inv-memory-parasite-detector",
+			"nombre": "Detector de Parasitos de Memoria",
+			"inventorId": "per-rick-chair",
+			"dimensionId": "dim-chair",
+			"nivelPeligro": 6,
+			"descripcion": "Dispositivo para identificar recuerdos implantados"
+		},
+		{
+			"id": "inv-snake-time-suit",
+			"nombre": "Traje Cronologico Serpiente",
+			"inventorId": "per-rick-snake",
+			"dimensionId": "dim-snake",
+			"nivelPeligro": 8,
+			"descripcion": "Equipo de viaje temporal para entornos reptilianos"
+		},
+		{
+			"id": "inv-gazorpian-war-drone",
+			"nombre": "Dron Belico Gazorpiano",
+			"inventorId": "per-king-gazorp",
+			"dimensionId": "dim-gazorpazorp",
+			"nivelPeligro": 7,
+			"descripcion": "Unidad autonoma de ofensiva orbital"
+		},
+		{
+			"id": "inv-phoenix-armor",
+			"nombre": "Armadura Fenix",
+			"inventorId": "per-phoenixperson",
+			"dimensionId": "dim-c137",
+			"nivelPeligro": 9,
+			"descripcion": "Exotraje de combate con autoreparacion"
+		},
+		{
+			"id": "inv-cronenberg-cure",
+			"nombre": "Protocolo de Cura Cronenberg",
+			"inventorId": "per-cronenberg-rick",
+			"dimensionId": "dim-cronenberg",
+			"nivelPeligro": 9,
+			"descripcion": "Tratamiento experimental con riesgo de recombinacion"
+		},
+		{
+			"id": "inv-pluto-gravity-crown",
+			"nombre": "Corona Gravitatoria Plutoniana",
+			"inventorId": "per-pluto-elder",
+			"dimensionId": "dim-post-apoc",
+			"nivelPeligro": 5,
+			"descripcion": "Regulador de campos gravitacionales urbanos"
+		},
+		{
+			"id": "inv-purge-shield",
+			"nombre": "Escudo de Purga",
+			"inventorId": "per-traflork-general",
+			"dimensionId": "dim-purge",
+			"nivelPeligro": 6,
+			"descripcion": "Barreras de energia para supervivencia nocturna"
+		},
+		{
+			"id": "inv-hive-link-antenna",
+			"nombre": "Antena de Enlace Colmena",
+			"inventorId": "per-hive-queen",
+			"dimensionId": "dim-oceanic",
+			"nivelPeligro": 7,
+			"descripcion": "Amplificador de sincronizacion neuronal masiva"
+		},
+		{
+			"id": "inv-arcade-reality-cartridge",
+			"nombre": "Cartucho de Realidad Arcade",
+			"inventorId": "per-rick-arcade",
+			"dimensionId": "dim-arcade",
+			"nivelPeligro": 8,
+			"descripcion": "Modulo que convierte escenarios en simulaciones jugables"
+		},
+		{
+			"id": "inv-morty-mind-blower-lite",
+			"nombre": "Mind Blower Lite",
+			"inventorId": "per-morty-micro",
+			"dimensionId": "dim-microverse",
+			"nivelPeligro": 6,
+			"descripcion": "Version reducida para borrado selectivo de memoria"
+		}
+	],
+	"planetas": [
+		{
+			"id": "pla-earth-c137",
+			"nombre": "Tierra C-137",
+			"dimensionId": "dim-c137",
+			"nivelAmenaza": 6,
+			"descripcion": "Planeta con alta frecuencia de eventos caoticos"
+		},
+		{
+			"id": "loc-citadel-ruins",
+			"nombre": "Ruinas de la Ciudadela",
+			"dimensionId": "dim-evil-rick",
+			"nivelAmenaza": 9,
+			"descripcion": "Restos del centro politico de los Ricks"
+		},
+		{
+			"id": "loc-galactic-federation-prison",
+			"nombre": "Prision de la Federacion",
+			"dimensionId": "dim-c137",
+			"nivelAmenaza": 8,
+			"descripcion": "Centro de contencion para amenazas clase omega"
+		},
+		{
+			"id": "loc-smith-house-35c",
+			"nombre": "Casa Smith 35-C",
+			"dimensionId": "dim-35c",
+			"nivelAmenaza": 3,
+			"descripcion": "Residencia familiar con medidas defensivas ocultas"
+		},
+		{
+			"id": "loc-gazorpazorp-capital",
+			"nombre": "Capital Gazorpazorp",
+			"dimensionId": "dim-gazorpazorp",
+			"nivelAmenaza": 7,
+			"descripcion": "Nucleo urbano con actividad militar constante"
+		},
+		{
+			"id": "loc-cronenberg-city",
+			"nombre": "Ciudad Cronenberg",
+			"dimensionId": "dim-cronenberg",
+			"nivelAmenaza": 10,
+			"descripcion": "Zona contaminada con mutaciones agresivas"
+		},
+		{
+			"id": "loc-chair-city",
+			"nombre": "Chair City",
+			"dimensionId": "dim-chair",
+			"nivelAmenaza": 4,
+			"descripcion": "Metropoli ergonomica con trafico hiperdenso"
+		},
+		{
+			"id": "loc-doofus-lab",
+			"nombre": "Laboratorio Doofus",
+			"dimensionId": "dim-doofus",
+			"nivelAmenaza": 2,
+			"descripcion": "Instalacion de ciencia abierta y experimental"
+		},
+		{
+			"id": "loc-fascist-court",
+			"nombre": "Corte Fascist",
+			"dimensionId": "dim-fascist",
+			"nivelAmenaza": 8,
+			"descripcion": "Complejo gubernamental en estado de ruina"
+		},
+		{
+			"id": "loc-post-apoc-desert",
+			"nombre": "Desierto Post-Apoc",
+			"dimensionId": "dim-post-apoc",
+			"nivelAmenaza": 6,
+			"descripcion": "Yermo radioactivo con tormentas de chatarra"
+		},
+		{
+			"id": "loc-oceanic-hive-reef",
+			"nombre": "Arrecife Colmena",
+			"dimensionId": "dim-oceanic",
+			"nivelAmenaza": 5,
+			"descripcion": "Centro de enlace de mentes oceanicas"
+		},
+		{
+			"id": "loc-purge-arena",
+			"nombre": "Arena de la Purga",
+			"dimensionId": "dim-purge",
+			"nivelAmenaza": 9,
+			"descripcion": "Escenario principal de rituales violentos"
+		},
+		{
+			"id": "loc-microverse-reactor",
+			"nombre": "Reactor Microverse",
+			"dimensionId": "dim-microverse",
+			"nivelAmenaza": 8,
+			"descripcion": "Central de energia mantenida por microcivilizaciones"
+		},
+		{
+			"id": "loc-snake-parliament",
+			"nombre": "Parlamento Serpiente",
+			"dimensionId": "dim-snake",
+			"nivelAmenaza": 5,
+			"descripcion": "Sede de disputas cronologicas reptilianas"
+		},
+		{
+			"id": "loc-arcade-core",
+			"nombre": "Nucleo Arcade",
+			"dimensionId": "dim-arcade",
+			"nivelAmenaza": 4,
+			"descripcion": "Servidor central de reglas de simulacion"
+		},
+		{
+			"id": "loc-j19z7-quarantine-zone",
+			"nombre": "Zona de Cuarentena J19",
+			"dimensionId": "dim-j19z7",
+			"nivelAmenaza": 7,
+			"descripcion": "Perimetro aislado por actividad memetica"
+		},
+		{
+			"id": "loc-pluto-throne",
+			"nombre": "Trono de Pluton",
+			"dimensionId": "dim-post-apoc",
+			"nivelAmenaza": 3,
+			"descripcion": "Camara ceremonial bajo la corte plutoniana"
+		},
+		{
+			"id": "loc-traflork-fortress",
+			"nombre": "Fortaleza Traflork",
+			"dimensionId": "dim-purge",
+			"nivelAmenaza": 7,
+			"descripcion": "Baluarte defensivo de operaciones militares"
+		},
+		{
+			"id": "loc-birdperson-sanctuary",
+			"nombre": "Santuario Birdperson",
+			"dimensionId": "dim-c137",
+			"nivelAmenaza": 4,
+			"descripcion": "Refugio oculto para aliados de confianza"
+		},
+		{
+			"id": "loc-evil-morty-command",
+			"nombre": "Centro de Mando de Evil Morty",
+			"dimensionId": "dim-evil-rick",
+			"nivelAmenaza": 10,
+			"descripcion": "Nodo de control con seguridad extrema"
+		}
+	]
+}
