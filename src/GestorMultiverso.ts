@@ -27,4 +27,12 @@ export class GestorMultiverso {
   pushEspecie(nuevaEspecie: Especies) { this.especies.push(nuevaEspecie); }
   pushPlanetaLocalizacion(nuevoPlanetaLocalizacion: PlanetasLocalizaciones) { this.planetasLocalizaciones.push(nuevoPlanetaLocalizacion); }
   pushInventosArtefactos(nuevoInventoArtefacto: InventosArtefactos) { this.inventosArtefactos.push(nuevoInventoArtefacto); }
+
+  //Listado de dimensiones activas con su nivel tecnonlogico
+  getDimensionesActivas(): Dimensiones[] {
+    return this.dimensiones.filter( d => d.getEstado() === "activa");
+  }
+
+  // Personajes con mayor numero de versiones alternativas
+  // Mismo nombre con diferente id
 }
