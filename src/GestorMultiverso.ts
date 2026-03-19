@@ -44,14 +44,15 @@ export class GestorMultiverso {
   // Personajes con mayor numero de versiones alternativas
   // Mismo nombre con diferente id
   getPersonajesConMasVersionesAlternativas(): Personajes[] {
-    let maxVersiones = Math.max(...this.personajes.map( p => this.personajes.filter( p2 => p2.getNombre() === p.getNombre()).length));
+    let maxVersiones: number = Math.max(...this.personajes.map( p => this.personajes.filter( p2 => p2.getNombre() === p.getNombre()).length));
     return this.personajes.filter( p => this.personajes.filter( p2 => p2.getNombre() === p.getNombre()).length === maxVersiones);   
   }
 
-  // Inventos mas peligrosos desplegados en dimensiones activas
+  // Inventos mas peligrosos desplegados en dimensiones activas | implementacion actual retorna cuando peligro >= 8
   // Para sacar la dimension de un artefacto acceder al atributo de dimension de origen del inventor
   getInventosPeligrososEnDimensionesActivas(): InventosArtefactos[] {
-
+    let inventosEnDimensionesActivas: InventosArtefactos[] = this.inventosArtefactos.filter( invento => this.dimensiones.some( dimension => dimension.getId() === invento.getInventor().getDimensionOrigen().getId() && dimension.getEstado() === "activa"));
+    return inventosEnDimensionesActivas.filter( invento => invento.getNivelPeligrosidad() >= 8);
   }
 
   // Viajes interdimensionales de un personaje especifico por ID
