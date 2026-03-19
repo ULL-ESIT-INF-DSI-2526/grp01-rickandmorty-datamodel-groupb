@@ -6,6 +6,14 @@ enum EstadoDimensiones {
   CUARENTENA = "cuarentena"
 }
 
+export interface DimensionDatos {
+  id: string;
+  nombre: string;
+  estado: EstadoDimensiones;
+  nivelTec: number;
+  descripcion: string;
+}
+
 export class Dimensiones extends AtributosComunes {
   private estado: EstadoDimensiones;
   private nivelTec: number;

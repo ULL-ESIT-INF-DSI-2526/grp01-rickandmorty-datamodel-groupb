@@ -8,6 +8,15 @@ enum TiposPlanetas {
   SIMULACIONVIRTUAL = "simulación virtual"
 }
 
+export interface PlanetaLocalizacionDatos {
+  id: string;
+  nombre: string;
+  tipoPlaneta: TiposPlanetas;
+  dimensionId: string;
+  poblacion: number;
+  descripcion: string;
+}
+
 export class PlanetasLocalizaciones extends AtributosComunes {
   private tipoPlaneta: TiposPlanetas;
   private dimension: Dimensiones;

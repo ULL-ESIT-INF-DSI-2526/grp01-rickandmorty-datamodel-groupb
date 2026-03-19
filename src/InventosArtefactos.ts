@@ -5,7 +5,16 @@ enum TipoArtefacto {
   ARMA = "arma",
   DISPOSITIVO_DE_VIAJE = "dispositivo de viaje",
   BIOTECNOLOGIA = "biotecnología",
-  OCA= "objeto catidiano absurdo"
+  OCA = "objeto cotidiano absurdo"
+}
+
+export interface InventoArtefactoDatos {
+  id: string;
+  nombre: string;
+  inventorId: string;
+  tipo: TipoArtefacto;
+  nivelPeligrosidad: number;
+  descripcion: string;
 }
 
 export class InventosArtefactos extends AtributosComunes {

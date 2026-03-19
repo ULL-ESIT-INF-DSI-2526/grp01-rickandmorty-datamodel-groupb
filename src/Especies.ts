@@ -8,6 +8,15 @@ enum TipoEspecie {
   HIVEMIND = "hivemind"
 }
 
+export interface EspecieDatos {
+  id: string;
+  nombre: string;
+  origen: string;
+  tipo: TipoEspecie;
+  esperanzaVida: number;
+  descripcion: string;
+}
+
 export class Especies extends AtributosComunes {
   private origen: string;
   private tipo: TipoEspecie;
@@ -22,7 +31,7 @@ export class Especies extends AtributosComunes {
 
   // Getters
   getOrigen(): string { return this.origen; }
-  getTipo(): string { return this.tipo; }
+  getTipo(): TipoEspecie { return this.tipo; }
   getEsperanzaVida(): number { return this.esperanzaVida; }
 
   // Setters

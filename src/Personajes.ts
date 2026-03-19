@@ -16,6 +16,17 @@ enum Afiliaciones {
   INDEPENDIENTE = "independiente"
 }
 
+export interface PersonajeDatos {
+  id: string;
+  nombre: string;
+  especieId: string;
+  dimensionOrigenId: string;
+  estado: Estados;
+  afiliacion: Afiliaciones;
+  nivelInteligencia: number;
+  descripcion: string;
+}
+
 export class Personajes extends AtributosComunes {
   private especie: Especies;
   private dimensionOrigen: Dimensiones;
