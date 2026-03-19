@@ -12,7 +12,7 @@ type ViajeInterdimensional = {
   dimensionDestino: Dimensiones;
   fechaViaje: Date;
   motivo: string;
-};
+}
 
 interface ViajeInterdimensionalDatos {
   personajeId: string;
