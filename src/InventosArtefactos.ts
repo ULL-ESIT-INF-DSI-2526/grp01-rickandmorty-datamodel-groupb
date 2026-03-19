@@ -1,4 +1,5 @@
 import { AtributosComunes } from "./AtributosComunes";
+import { Personajes } from "./Personajes";
 
 enum TipoArtefacto {
   ARMA = "arma",
@@ -8,24 +9,24 @@ enum TipoArtefacto {
 }
 
 export class InventosArtefactos extends AtributosComunes {
-  private inventor: string;
+  private inventor: Personajes;
   private tipo: TipoArtefacto;
   private nivelPeligrosidad: number;
 
-  constructor(id: string, nombre: string, descripcion: string, inventor: string, tipo: TipoArtefacto, nivelPeligrosidad: number) {
+  constructor(id: string, nombre: string, descripcion: string, inventor: Personajes, tipo: TipoArtefacto, nivelPeligrosidad: number) {
     super(id, nombre, descripcion);
-    this.inventor = this.comprobarVacio(inventor);
+    this.inventor = this.comprobarInventor(inventor);
     this.tipo = this.comprobarTipo(tipo);
     this.nivelPeligrosidad = this.comprobarNivelPeligrosidad(nivelPeligrosidad);
   }
 
   // Getters
-  getInventor(): string { return this.inventor; }
+  getInventor(): Personajes { return this.inventor; }
   getTipo(): TipoArtefacto { return this.tipo; }
   getNivelPeligrosidad(): number { return this.nivelPeligrosidad; }
 
   // Setters
-  setInventor(inventor: string) { this.inventor = this.comprobarVacio(inventor); }
+  setInventor(inventor: Personajes) { this.inventor = this.comprobarInventor(inventor); }
   setTipo(tipo: TipoArtefacto) { this.tipo = this.comprobarTipo(tipo); }
   setNivelPeligrosidad(nivel: number) { this.nivelPeligrosidad = this.comprobarNivelPeligrosidad(nivel); }
 
@@ -35,6 +36,14 @@ export class InventosArtefactos extends AtributosComunes {
       return tipo as TipoArtefacto;
     } else {
       throw new Error("El tipo de artefacto sólo puede ser arma/dispositivo de viaje/biotecnología/objeto catidiano absurdo");
+    }
+  }
+
+  comprobarInventor(inventor: Personajes): Personajes {
+    if (inventor === null || inventor === undefined) {
+      throw new Error("El inventor no puede estar vacío");
+    } else {
+      return inventor;
     }
   }
 
