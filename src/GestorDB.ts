@@ -41,7 +41,7 @@ export class GestorDataBase {
       eventosGlobales: []
     }
 
-    this.dataBase = await JSONFilePreset<EsquemaMultiverso>("../db/db.json", defaultData);    
+    this.dataBase = await JSONFilePreset<EsquemaMultiverso>("db/db.json", defaultData);    
 
     // Cargamos los datos que no tienen dependencias
     this.eventosGlobales = this.dataBase.data.eventosGlobales || [];
