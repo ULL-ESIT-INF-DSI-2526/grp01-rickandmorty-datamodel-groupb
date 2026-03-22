@@ -37,7 +37,7 @@ async function iniciarMenu() {
         break;
 
       case 'inventos':
-        const invs = gestor.getInventosPeligrososEnDimensionesActivas();
+        const invs = gestor.getInventosPeligrososDesplegados();
         console.log("\n--- INVENTOS PELIGROSOS ---\n");
         if (invs.length === 0) console.log("No hay inventos registrados aún");
         invs.forEach(i => console.log(`- ${i.getNombre()} (Peligro: ${i.getNivelPeligrosidad()} - Inventor: ${i.getInventor().getNombre()})`));
