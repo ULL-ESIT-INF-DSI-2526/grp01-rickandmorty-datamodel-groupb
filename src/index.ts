@@ -124,6 +124,12 @@ async function menuGestion(gestor: GestorMultiverso) {
         { type: 'number', name: 'nivelTec', message: 'Nivel Tecnológico (1-10):', min: 1, max: 10 },
         { type: 'text', name: 'descripcion', message: 'Descripción:' }
       ]);
+
+      if (gestor.getDimensiones().some(dim => dim.getId() === d.id)) {
+        console.log("Error: Ya existe una dimensión con el ID " + d.id);
+        return;
+      }
+
       await gestor.pushDimension(new Dimensiones(d.id, d.nombre, d.estado as EstadoDimensiones, d.nivelTec, d.descripcion));
       console.log("Dimensión añadida.");
     }
@@ -137,6 +143,12 @@ async function menuGestion(gestor: GestorMultiverso) {
         { type: 'number', name: 'esperanzaVida', message: 'Esperanza de Vida (años):', min: 0 },
         { type: 'text', name: 'descripcion', message: 'Descripción:' }
       ]);
+
+      if (gestor.getEspecies().some(esp => esp.getId() === e.id)) {
+        console.log("Error: Ya existe una especie con el ID " + e.id);
+        return;
+      }
+
       await gestor.pushEspecie(new Especies(e.id, e.nombre, e.origen, e.tipo as TipoEspecie, e.esperanzaVida, e.descripcion));
       console.log("Especie añadida.");
     }
@@ -152,6 +164,11 @@ async function menuGestion(gestor: GestorMultiverso) {
         { type: 'number', name: 'inteligencia', message: 'Inteligencia (1-10):', min: 1, max: 10 },
         { type: 'text', name: 'descripcion', message: 'Descripción:' }
       ]);
+
+      if (gestor.getPersonajes().some(per => per.getId() === p.id)) {
+        console.log("Error: Ya existe un personaje con el ID " + p.id);
+        return;
+      }
       
       const especie = gestor.getEspecies().find(e => e.getId() === p.especieId);
       const dimension = gestor.getDimensiones().find(d => d.getId() === p.dimId);
@@ -170,6 +187,11 @@ async function menuGestion(gestor: GestorMultiverso) {
         { type: 'number', name: 'poblacion', message: 'Población aproximada:', min: 0 },
         { type: 'text', name: 'descripcion', message: 'Descripción:' }
       ]);
+
+      if (gestor.getPlanetasLocalizaciones().some(loc => loc.getId() === l.id)) {
+        console.log("Error: Ya existe una localización con el ID " + l.id);
+        return;
+      }
       
       const dimension = gestor.getDimensiones().find(d => d.getId() === l.dimId);
       if (!dimension) { console.log("Error: Dimensión no encontrada."); return; }
@@ -187,6 +209,11 @@ async function menuGestion(gestor: GestorMultiverso) {
         { type: 'number', name: 'peligrosidad', message: 'Nivel de Peligrosidad (1-10):', min: 1, max: 10 },
         { type: 'text', name: 'descripcion', message: 'Descripción:' }
       ]);
+
+      if (gestor.getInventosArtefactos().some(inv => inv.getId() === i.id)) {
+        console.log("Error: Ya existe un invento con el ID " + i.id);
+        return;
+      }
       
       const inventor = gestor.getPersonajes().find(p => p.getId() === i.inventorId);
       if (!inventor) { console.log("Error: Personaje inventor no encontrado."); return; }
