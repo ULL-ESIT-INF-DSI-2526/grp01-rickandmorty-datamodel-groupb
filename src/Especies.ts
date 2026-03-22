@@ -34,12 +34,12 @@ export class Especies extends AtributosComunes {
   /**
    * Crea una instancia de especie con validaciones basicas.
    *
-   * @param id Identificador unico.
-   * @param nombre Nombre de la especie.
-   * @param origen Mundo o dimension de origen.
-   * @param tipo Tipo taxonomico de la especie.
-   * @param esperanzaVida Anios de vida esperados.
-   * @param descripcion Descripcion general.
+   * @param id - Identificador unico.
+   * @param nombre - Nombre de la especie.
+   * @param origen - Mundo o dimension de origen.
+   * @param tipo - Tipo taxonomico de la especie.
+   * @param esperanzaVida - Años de vida esperados.
+   * @param descripcion - Descripción general.
    */
   constructor(id: string, nombre: string, origen: string, tipo: TipoEspecie, esperanzaVida: number, descripcion: string) {
     super(id, nombre, descripcion);
@@ -68,26 +68,26 @@ export class Especies extends AtributosComunes {
 
   /**
    * Actualiza el origen tras validar que no este vacio.
-   * @param origen Nuevo origen.
+   * @param origen - Nuevo origen.
    */
   setOrigen(origen: string) { this.origen = this.comprobarVacio(origen); }
 
   /**
    * Actualiza el tipo de especie.
-   * @param tipo Nuevo tipo.
+   * @param tipo - Nuevo tipo.
    */
   setTipo(tipo: TipoEspecie) { this.tipo = tipo; }
 
   /**
    * Actualiza la esperanza de vida tras validarla.
-   * @param esperanzaVida Nuevo valor de esperanza de vida.
+   * @param esperanzaVida - Nuevo valor de esperanza de vida.
    */
   setEsperanzaVida(esperanzaVida: number) { this.esperanzaVida = this.comprobarEsperanzaVida(esperanzaVida); }
 
   /**
    * Comprueba que la esperanza de vida no sea negativa.
    *
-   * @param esperanzaVida Valor a validar.
+   * @param esperanzaVida - Valor a validar.
    * @returns El mismo valor si es valido.
    * @throws Error Se lanza si el valor es menor que cero.
    */

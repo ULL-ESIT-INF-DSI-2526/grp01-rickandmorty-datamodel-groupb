@@ -11,9 +11,9 @@ export class AtributosComunes {
   /**
    * Constructor
    *
-   * @param id identificador unico
-   * @param nombre nombre principal
-   * @param descripcion descripcion breve
+   * @param id - identificador unico
+   * @param nombre - nombre principal
+   * @param descripcion - descripcion breve
    * @throws errores en caso de que alguna entrada sea vacia
    */
   constructor(id: string, nombre: string, descripcion: string) {
@@ -42,20 +42,20 @@ export class AtributosComunes {
 
   /**
    * Modifica el nombre de la entidad
-   * @param nuevoNombre nombre nuevo para la entidad
+   * @param nuevoNombre - nombre nuevo para la entidad
    */
   setNombre(nuevoNombre: string) { this.nombre = nuevoNombre; }
 
   /**
    * Modifica la descripcion de la entidad
-   * @param nuevaDesc Nuevo valor para la descripcion
+   * @param nuevaDesc - Nuevo valor para la descripcion
    */
   setDesc(nuevaDesc: string) { this.descripcion = nuevaDesc; }
 
   /**
    * Verificacion que la cadena recibida no sea vacia
    *
-   * @param str Cadena a validar
+   * @param str - Cadena a validar
    * @returns La misma cadena
    * @throws Error Se lanza cuando la cadena es vacia
    */

@@ -37,13 +37,13 @@ export class InventosArtefactos extends AtributosComunes {
   /**
    * Crea un invento asociando inventor, tipo y peligrosidad.
    *
-   * @param id Identificador del invento.
-   * @param nombre Nombre del artefacto.
-   * @param descripcion Descripcion funcional.
-   * @param inventor Personaje responsable del invento.
-   * @param tipo Tipo de artefacto.
-   * @param nivelPeligrosidad Nivel de riesgo en escala 1..10.
-   * @param localizacionDespliegue Localizacion actual o null.
+   * @param id - Identificador del invento.
+   * @param nombre - Nombre del artefacto.
+   * @param descripcion - Descripcion funcional.
+   * @param inventor - Personaje responsable del invento.
+   * @param tipo - Tipo de artefacto.
+   * @param nivelPeligrosidad - Nivel de riesgo en escala 1..10.
+   * @param localizacionDespliegue - Localizacion actual o null.
    */
   constructor(id: string, nombre: string, descripcion: string, inventor: Personajes, tipo: TipoArtefacto, nivelPeligrosidad: number, localizacionDespliegue: PlanetasLocalizaciones | null = null) {
     super(id, nombre, descripcion);
@@ -79,32 +79,32 @@ export class InventosArtefactos extends AtributosComunes {
 
   /**
    * Actualiza el inventor tras validarlo.
-   * @param inventor Nuevo inventor.
+   * @param inventor - Nuevo inventor.
    */
   setInventor(inventor: Personajes) { this.inventor = this.comprobarInventor(inventor); }
 
   /**
    * Actualiza el tipo del artefacto.
-   * @param tipo Nuevo tipo.
+   * @param tipo - Nuevo tipo.
    */
   setTipo(tipo: TipoArtefacto) { this.tipo = tipo; }
 
   /**
    * Actualiza la peligrosidad tras validarla.
-   * @param nivel Nuevo nivel de peligrosidad.
+   * @param nivel - Nuevo nivel de peligrosidad.
    */
   setNivelPeligrosidad(nivel: number) { this.nivelPeligrosidad = this.comprobarNivelPeligrosidad(nivel); }
 
   /**
    * Actualiza la localizacion de despliegue del invento.
-   * @param loc Nueva localizacion o null para retirarlo.
+   * @param loc - Nueva localizacion o null para retirarlo.
    */
   setLocalizacionDespliegue(loc: PlanetasLocalizaciones | null) { this.localizacionDespliegue = loc; }
 
   /**
    * Comprueba que exista un inventor asociado.
    *
-   * @param inventor Inventor a validar.
+   * @param inventor - Inventor a validar.
    * @returns El inventor si es valido.
    * @throws Error Se lanza si es null o undefined.
    */
@@ -119,7 +119,7 @@ export class InventosArtefactos extends AtributosComunes {
   /**
    * Comprueba que la peligrosidad este en el rango permitido.
    *
-   * @param nivel Nivel a validar.
+   * @param nivel - Nivel a validar.
    * @returns Nivel si es valido.
    * @throws Error Se lanza si el valor esta fuera de 1..10.
    */

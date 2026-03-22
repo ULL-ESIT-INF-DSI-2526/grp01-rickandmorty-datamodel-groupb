@@ -34,12 +34,12 @@ export class PlanetasLocalizaciones extends AtributosComunes {
   /**
    * Crea una localizacion validando su poblacion.
    *
-   * @param id Identificador unico.
-   * @param nombre Nombre de la localizacion.
-   * @param tipoPlaneta Tipo de localizacion.
-   * @param dimension Dimension en la que existe.
-   * @param poblacion Cantidad aproximada de habitantes.
-   * @param descripcion Descripcion breve.
+   * @param id - Identificador unico.
+   * @param nombre - Nombre de la localizacion.
+   * @param tipoPlaneta - Tipo de localizacion.
+   * @param dimension - Dimension en la que existe.
+   * @param poblacion - Cantidad aproximada de habitantes.
+   * @param descripcion - Descripcion breve.
    */
   constructor(id: string, nombre: string, tipoPlaneta: TiposPlanetas, dimension: Dimensiones, poblacion: number, descripcion: string) {
     super(id, nombre, descripcion);
@@ -68,26 +68,26 @@ export class PlanetasLocalizaciones extends AtributosComunes {
 
   /**
    * Actualiza el tipo de localizacion.
-   * @param nuevoTipoPlaneta Nuevo tipo de planeta.
+   * @param nuevoTipoPlaneta - Nuevo tipo de planeta.
    */
   setTipoPlaneta(nuevoTipoPlaneta: TiposPlanetas) { this.tipoPlaneta = nuevoTipoPlaneta}
 
   /**
    * Actualiza la dimension asociada.
-   * @param nuevaDimension Nueva dimension.
+   * @param nuevaDimension - Nueva dimension.
    */
   setDimension(nuevaDimension: Dimensiones) { this.dimension = nuevaDimension; }
 
   /**
    * Actualiza la poblacion tras validarla.
-   * @param nuevaPoblacion Nueva poblacion.
+   * @param nuevaPoblacion - Nueva poblacion.
    */
   setPoblacion(nuevaPoblacion: number) { this.poblacion = this.ComprobarPoblacion(nuevaPoblacion); }
 
   /**
    * Verifica que la poblacion no sea negativa.
    *
-   * @param poblacion Valor a validar.
+   * @param poblacion - Valor a validar.
    * @returns El valor recibido si es valido.
    * @throws Error Se lanza si la poblacion es menor que cero.
    */

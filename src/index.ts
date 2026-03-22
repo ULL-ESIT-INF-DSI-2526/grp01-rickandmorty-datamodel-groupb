@@ -60,7 +60,7 @@ async function main() {
 /**
  * Menu de gestion de entidades con opciones para añadir, modificar o eliminar.
  *
- * @param gestor Instancia activa del gestor del multiverso.
+ * @param gestor - Instancia activa del gestor del multiverso.
  */
 async function menuGestion(gestor: GestorMultiverso) {
   const { entidad, accion } = await prompts([
@@ -237,7 +237,7 @@ async function menuGestion(gestor: GestorMultiverso) {
 
 /**
  * Ejecuta consultas avanzadas de personajes con filtros y ordenacion.
- * @param gestor Instancia activa del gestor del multiverso.
+ * @param gestor - Instancia activa del gestor del multiverso.
  */
 async function menuConsultarPersonajes(gestor: GestorMultiverso) {
   const p = await prompts([
@@ -272,7 +272,7 @@ async function menuConsultarPersonajes(gestor: GestorMultiverso) {
 
 /**
  * Ejecuta consultas de localizaciones por filtros simples.
- * @param gestor Instancia activa del gestor del multiverso.
+ * @param gestor - Instancia activa del gestor del multiverso.
  */
 async function menuConsultarLocalizaciones(gestor: GestorMultiverso) {
   const p = await prompts([
@@ -288,7 +288,7 @@ async function menuConsultarLocalizaciones(gestor: GestorMultiverso) {
 
 /**
  * Ejecuta consultas de inventos y artefactos por criterios combinados.
- * @param gestor Instancia activa del gestor del multiverso.
+ * @param gestor - Instancia activa del gestor del multiverso.
  */
 async function menuConsultarInventos(gestor: GestorMultiverso) {
   const p = await prompts([
@@ -308,7 +308,7 @@ async function menuConsultarInventos(gestor: GestorMultiverso) {
 
 /**
  * Muestra versiones alternativas de un personaje dado su nombre.
- * @param gestor Instancia activa del gestor del multiverso.
+ * @param gestor - Instancia activa del gestor del multiverso.
  */
 async function localizarAlternativas(gestor: GestorMultiverso) {
   const { nombre } = await prompts({ type: 'text', name: 'nombre', message: 'Introduce el nombre exacto del personaje:' });
@@ -319,7 +319,7 @@ async function localizarAlternativas(gestor: GestorMultiverso) {
 
 /**
  * Gestiona el registro de eventos interdimensionales relevantes.
- * @param gestor Instancia activa del gestor del multiverso.
+ * @param gestor - Instancia activa del gestor del multiverso.
  */
 async function menuEventos(gestor: GestorMultiverso) {
   const { tipo } = await prompts({
@@ -383,7 +383,7 @@ async function menuEventos(gestor: GestorMultiverso) {
 
 /**
  * Genera informes del estado actual del multiverso.
- * @param gestor Instancia activa del gestor del multiverso.
+ * @param gestor - Instancia activa del gestor del multiverso.
  */
 async function menuInformes(gestor: GestorMultiverso) {
   console.log("\nInformes del multiverso");

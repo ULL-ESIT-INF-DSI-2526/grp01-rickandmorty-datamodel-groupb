@@ -30,11 +30,11 @@ export class Dimensiones extends AtributosComunes {
   /**
    * Crea una nueva dimension validando su estado y nivel tecnologico
    *
-   * @param id Identificador unico de la dimension
-   * @param nombre Nombre visible de la dimension
-   * @param estado Estado actual de la dimension
-   * @param nivelTec Nivel tecnologico de 1 a 10
-   * @param descripcion Descripcion breve de la dimension
+   * @param id - Identificador unico de la dimension
+   * @param nombre - Nombre visible de la dimension
+   * @param estado - Estado actual de la dimension
+   * @param nivelTec - Nivel tecnologico de 1 a 10
+   * @param descripcion - Descripcion breve de la dimension
    */
   constructor(id: string, nombre: string, estado: EstadoDimensiones, nivelTec: number, descripcion: string) {
     super(id, nombre, descripcion);
@@ -56,20 +56,20 @@ export class Dimensiones extends AtributosComunes {
 
   /**
    * Actualiza el estado de la dimension
-   * @param estado Nuevo estado valido
+   * @param estado - Nuevo estado valido
    */
   setEstado(estado: EstadoDimensiones) { this.estado = estado; }
 
   /**
    * Actualiza el nivel tecnologico tras validarlo
-   * @param nivelTec Nuevo nivel tecnologico
+   * @param nivelTec - Nuevo nivel tecnologico
    */
   setLvlTecnologico(nivelTec: number) { this.nivelTec = this.comprobarNivelTec(nivelTec); }
 
   /**
    * Verifica que el estado sea uno de los permitidos
    *
-   * @param estado Estado a validar
+   * @param estado - Estado a validar
    * @returns Estado convertido al enum correspondiente
    * @throws Error Se lanza si el estado no es valido
    */
@@ -84,7 +84,7 @@ export class Dimensiones extends AtributosComunes {
   /**
    * Verifica que el nivel tecnologico este en el rango permitido
    *
-   * @param nivel Nivel a validar
+   * @param nivel - Nivel a validar
    * @returns El nivel si es valido
    * @throws Error Se lanza si esta fuera del rango 1..10
    */

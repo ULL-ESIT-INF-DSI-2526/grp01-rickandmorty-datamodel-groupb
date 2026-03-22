@@ -49,14 +49,14 @@ export class Personajes extends AtributosComunes {
   /**
    * Crea un personaje validando su nivel de inteligencia.
    *
-   * @param id Identificador unico
-   * @param nombre Nombre del personaje
-   * @param especie Especie asociada
-   * @param dimensionOrigen Dimension de origen
-   * @param estado Estado actual del personaje
-   * @param afiliacion Afiliacion principal
-   * @param nivelInteligencia Nivel de inteligencia de 1 a 10
-   * @param descripcion Descripcion general
+   * @param id - Identificador unico
+   * @param nombre - Nombre del personaje
+   * @param especie - Especie asociada
+   * @param dimensionOrigen - Dimension de origen
+   * @param estado - Estado actual del personaje
+   * @param afiliacion - Afiliacion principal
+   * @param nivelInteligencia - Nivel de inteligencia de 1 a 10
+   * @param descripcion - Descripcion general
    */
   constructor(id: string, nombre: string, especie: Especies, dimensionOrigen: Dimensiones, 
     estado: Estados, afiliacion: Afiliaciones, nivelInteligencia: number, descripcion: string) {
@@ -100,31 +100,31 @@ export class Personajes extends AtributosComunes {
 
   /**
    * Actualiza la especie asociada
-   * @param nuevaEspecie Nueva especie
+   * @param nuevaEspecie - Nueva especie
    */
   setEspecie(nuevaEspecie: Especies) { this.especie = nuevaEspecie; }
 
   /**
    * Actualiza la dimension de origen
-   * @param nuevaDimension Nueva dimension
+   * @param nuevaDimension - Nueva dimension
    */
   setDimensionOrigen(nuevaDimension: Dimensiones) { this.dimensionOrigen = nuevaDimension; }
 
   /**
    * Actualiza el estado del personaje
-   * @param nuevoEstado Nuevo estado
+   * @param nuevoEstado - Nuevo estado
    */
   setEstado(nuevoEstado: Estados) { this.estado = nuevoEstado; }
 
   /**
    * Actualiza la afiliacion del personaje
-   * @param nuevaAfiliacion Nueva afiliacion
+   * @param nuevaAfiliacion - Nueva afiliacion
    */
   setAfiliacion(nuevaAfiliacion: Afiliaciones) { this.afiliacion = nuevaAfiliacion; }
 
   /**
    * Actualiza la inteligencia tras validarla
-   * @param nuevoNivel Nuevo nivel de inteligencia
+   * @param nuevoNivel - Nuevo nivel de inteligencia
    */
   setNivelInteligencia(nuevoNivel: number) {
     this.comprobarNivelInteligencia(nuevoNivel);
@@ -134,7 +134,7 @@ export class Personajes extends AtributosComunes {
   /**
    * Comprueba que la inteligencia este en escala valida
    *
-   * @param nivelInteligencia Valor a validar
+   * @param nivelInteligencia - Valor a validar
    * @returns El nivel si es valido
    * @throws Error Se lanza si esta fuera de 1..10
    */

@@ -45,7 +45,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Inserta una nueva dimension y persiste cambios.
-   * @param nuevaDimension Dimension a registrar.
+   * @param nuevaDimension - Dimension a registrar.
    */
   async pushDimension(nuevaDimension: Dimensiones) { 
     this.dimensiones.push(nuevaDimension); 
@@ -54,7 +54,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Inserta un nuevo personaje y persiste cambios.
-   * @param nuevoPersonaje Personaje a registrar.
+   * @param nuevoPersonaje - Personaje a registrar.
    */
   async pushPersonaje(nuevoPersonaje: Personajes) { 
     this.personajes.push(nuevoPersonaje); 
@@ -63,7 +63,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Inserta una nueva especie y persiste cambios.
-   * @param nuevaEspecie Especie a registrar.
+   * @param nuevaEspecie - Especie a registrar.
    */
   async pushEspecie(nuevaEspecie: Especies) { 
     this.especies.push(nuevaEspecie); 
@@ -72,7 +72,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Inserta una nueva localizacion y persiste cambios.
-   * @param nuevoPlanetaLocalizacion Localizacion a registrar.
+   * @param nuevoPlanetaLocalizacion - Localizacion a registrar.
    */
   async pushPlanetaLocalizacion(nuevoPlanetaLocalizacion: PlanetasLocalizaciones) { 
     this.planetasLocalizaciones.push(nuevoPlanetaLocalizacion); 
@@ -81,7 +81,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Inserta un nuevo invento o artefacto y persiste cambios.
-   * @param nuevoInventoArtefacto Artefacto a registrar.
+   * @param nuevoInventoArtefacto - Artefacto a registrar.
    */
   async pushInventosArtefactos(nuevoInventoArtefacto: InventosArtefactos) { 
     this.inventosArtefactos.push(nuevoInventoArtefacto); 
@@ -90,7 +90,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Inserta un viaje interdimensional y persiste cambios.
-   * @param nuevoViaje Viaje a registrar.
+   * @param nuevoViaje - Viaje a registrar.
    */
   async pushViajeInterdimensional(nuevoViaje: ViajeInterdimensional) {
     this.viajesInterdimensionales.push(nuevoViaje);
@@ -99,7 +99,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Registra un evento global con sello temporal ISO.
-   * @param mensaje Mensaje del evento.
+   * @param mensaje - Mensaje del evento.
    */
   public async registrarEventoGlobal(mensaje: string) {
     const fecha = new Date().toISOString();
@@ -109,7 +109,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Elimina una dimension por su identificador.
-   * @param id ID de la dimension.
+   * @param id - ID de la dimension.
    */
   async deleteDimension(id: string) {
     this.dimensiones = this.dimensiones.filter(d => d.getId() !== id);
@@ -118,7 +118,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Elimina un personaje por su identificador.
-   * @param id ID del personaje.
+   * @param id - ID del personaje.
    */
   async deletePersonaje(id: string) {
     this.personajes = this.personajes.filter(p => p.getId() !== id);
@@ -127,7 +127,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Elimina una especie por su identificador.
-   * @param id ID de la especie.
+   * @param id - ID de la especie.
    */
   async deleteEspecie(id: string) {
     this.especies = this.especies.filter(e => e.getId() !== id);
@@ -136,7 +136,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Elimina una localizacion por su identificador.
-   * @param id ID de la localizacion.
+   * @param id - ID de la localizacion.
    */
   async deleteLocalizacion(id: string) {
     this.planetasLocalizaciones = this.planetasLocalizaciones.filter(l => l.getId() !== id);
@@ -145,7 +145,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Elimina un invento por su identificador.
-   * @param id ID del invento.
+   * @param id - ID del invento.
    */
   async deleteInvento(id: string) {
     this.inventosArtefactos = this.inventosArtefactos.filter(i => i.getId() !== id);
@@ -214,7 +214,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Busca todas las versiones de un personaje por nombre (sin importar mayusculas).
-   * @param nombrePersonaje Nombre base a buscar.
+   * @param nombrePersonaje - Nombre base a buscar.
    * @returns Arreglo con coincidencias.
    */
   getVersionesAlternativas(nombrePersonaje: string): Personajes[] {
@@ -222,7 +222,7 @@ export class GestorMultiverso extends GestorDataBase {
   }
 
   /**
-   * Devuelve inventos desplegados con alta peligrosidad (>= 8), ordenados desc.
+   * Devuelve inventos desplegados con alta peligrosidad (\>= 8), ordenados desc.
    * @returns Arreglo de inventos peligrosos desplegados.
    */
   getInventosPeligrososDesplegados(): InventosArtefactos[] {
@@ -231,7 +231,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Consulta los viajes registrados de un personaje concreto.
-   * @param personajeId ID del personaje.
+   * @param personajeId - ID del personaje.
    * @returns Historial de viajes del personaje.
    */
   getViajesInterdimensionales(personajeId: string): ViajeInterdimensional[] {
@@ -240,7 +240,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Filtra personajes por un conjunto opcional de criterios.
-   * @param filtros Criterios de busqueda combinables.
+   * @param filtros - Criterios de busqueda combinables.
    * @returns Personajes que cumplen los filtros.
    */
   filtrarPersonajes(filtros: { nombre?: string, especieId?: string, afiliacion?: string, estado?: string, dimensionId?: string }): Personajes[] {
@@ -257,7 +257,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Filtra localizaciones por nombre, tipo y/o dimension.
-   * @param filtros Criterios de busqueda combinables.
+   * @param filtros - Criterios de busqueda combinables.
    * @returns Localizaciones que cumplen los filtros.
    */
   filtrarLocalizaciones(filtros: { nombre?: string, tipo?: string, dimensionId?: string }): PlanetasLocalizaciones[] {
@@ -272,7 +272,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Filtra inventos por nombre, tipo, inventor o peligrosidad exacta.
-   * @param filtros Criterios de busqueda combinables.
+   * @param filtros - Criterios de busqueda combinables.
    * @returns Inventos que cumplen los filtros.
    */
   filtrarInventos(filtros: { nombre?: string, tipo?: string, inventorId?: string, peligrosidad?: number }): InventosArtefactos[] {
@@ -288,7 +288,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Registra un viaje y lo anota en el historial de eventos globales.
-   * @param viaje Viaje a registrar.
+   * @param viaje - Viaje a registrar.
    */
   async registrarViajeInterdimensional(viaje: ViajeInterdimensional) {
     this.viajesInterdimensionales.push(viaje);
@@ -298,8 +298,8 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Marca una dimension como destruida y actualiza efectos globales.
-   * @param dimensionId ID de la dimension a destruir.
-   * @param motivo Motivo narrativo/operativo de la destruccion.
+   * @param dimensionId - ID de la dimension a destruir.
+   * @param motivo - Motivo narrativo/operativo de la destruccion.
    */
   async destruirDimension(dimensionId: string, motivo: string) {
     const dim = this.dimensiones.find(d => d.getId() === dimensionId);
@@ -313,8 +313,8 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Despliega un invento en una localizacion y registra el evento.
-   * @param inventoId ID del invento.
-   * @param localizacionId ID de la localizacion destino.
+   * @param inventoId - ID del invento.
+   * @param localizacionId - ID de la localizacion destino.
    */
   async desplegarInvento(inventoId: string, localizacionId: string) {
     const invento = this.inventosArtefactos.find(i => i.getId() === inventoId);
@@ -329,7 +329,7 @@ export class GestorMultiverso extends GestorDataBase {
 
   /**
    * Neutraliza un invento retirandolo de su localizacion actual.
-   * @param inventoId ID del invento a neutralizar.
+   * @param inventoId - ID del invento a neutralizar.
    */
   async neutralizarInvento(inventoId: string) {
     const invento = this.inventosArtefactos.find(i => i.getId() === inventoId);
