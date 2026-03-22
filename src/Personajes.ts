@@ -2,14 +2,14 @@ import { AtributosComunes } from "./AtributosComunes";
 import { Especies } from "./Especies";
 import { Dimensiones } from "./Dimensiones";
 
-enum Estados {
+export enum Estados {
   VIVO = "vivo",
   MUERTO = "muerto",
   DESCONOCIDO = "desconocido",
   ROBOT_SUSTITUTO = "robot-sustituto"
 }
 
-enum Afiliaciones {
+export enum Afiliaciones {
   FEDERACION_GALACTICA = "federación galáctica",
   CONSEJO_RICKS = "consejo de ricks",
   FAMILIA_SMITH = "familia smith",

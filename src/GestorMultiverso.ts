@@ -54,6 +54,11 @@ export class GestorMultiverso extends GestorDataBase {
     await this.guardarDatos();
   }
 
+  async pushViajeInterdimensional(nuevoViaje: ViajeInterdimensional) {
+    this.viajesInterdimensionales.push(nuevoViaje);
+    await this.guardarDatos();
+  }
+
   // Listado de dimensiones activas con su nivel tecnonlogico
   getDimensionesActivas(): Dimensiones[] {
     return this.dimensiones.filter(d => d.getEstado() === "activa");

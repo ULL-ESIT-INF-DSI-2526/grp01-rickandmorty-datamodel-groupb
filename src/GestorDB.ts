@@ -71,6 +71,23 @@ export class GestorDataBase {
       if (!perReal) { throw new Error(`Inventor con ${i.inventorId} no encontrado para el invento ${i.id}`); }
       return new InventosArtefactos(i.id, i.nombre, i.descripcion, perReal, i.tipo, i.nivelPeligrosidad);
     });
+
+    // Cargamos los viajes interdimensionales
+    this.viajesInterdimensionales = this.dataBase.data.viajesInterdimensionales.map(v => {
+      const perReal = this.personajes.find(p => p.getId() === v.personajeId);
+      const dimReal = this.dimensiones.find(d => d.getId() === v.dimensionDestinoId);
+
+      if (!perReal || !dimReal) { 
+        throw new Error(`Personaje ${v.personajeId} o Dimensión ${v.dimensionDestinoId} no encontrados para el viaje`); 
+      }
+      return {
+        personaje: perReal,
+        dimensionDestino: dimReal,
+        fechaViaje: new Date(v.fechaViaje), // Convertimos el string del JSON a Date
+        motivo: v.motivo
+      };
+    });
+
   }
 
   // Función que guarda datos a la DB
@@ -93,6 +110,10 @@ export class GestorDataBase {
 
     this.dataBase.data.inventosArtefactos = this.inventosArtefactos.map(i => ({
       id: i.getId(), nombre: i.getNombre(), inventorId: i.getInventor().getId(), tipo: i.getTipo(), nivelPeligrosidad: i.getNivelPeligrosidad(), descripcion: i.getDesc()
+    }));
+
+    this.dataBase.data.viajesInterdimensionales = this.viajesInterdimensionales.map(v => ({
+      personajeId: v.personaje.getId(), dimensionDestinoId: v.dimensionDestino.getId(), fechaViaje: v.fechaViaje, motivo: v.motivo
     }));
 
     await this.dataBase.write();

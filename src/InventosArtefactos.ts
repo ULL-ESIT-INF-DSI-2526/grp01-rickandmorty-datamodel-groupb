@@ -1,7 +1,7 @@
 import { AtributosComunes } from "./AtributosComunes";
 import { Personajes } from "./Personajes";
 
-enum TipoArtefacto {
+export enum TipoArtefacto {
   ARMA = "arma",
   DISPOSITIVO_DE_VIAJE = "dispositivo de viaje",
   BIOTECNOLOGIA = "biotecnología",
@@ -41,10 +41,10 @@ export class InventosArtefactos extends AtributosComunes {
 
   // Comprobaciones
   comprobarTipo(tipo: string): TipoArtefacto {
-    if (tipo === "arma" || tipo === "dispositivo de viaje" || tipo === "biotecnología" || tipo === "objeto catidiano absurdo") {
+    if (tipo === "arma" || tipo === "dispositivo de viaje" || tipo === "biotecnología" || tipo === "objeto cotidiano absurdo") {
       return tipo as TipoArtefacto;
     } else {
-      throw new Error("El tipo de artefacto sólo puede ser arma/dispositivo de viaje/biotecnología/objeto catidiano absurdo");
+      throw new Error("El tipo de artefacto sólo puede ser arma/dispositivo de viaje/biotecnología/objeto cotidiano absurdo");
     }
   }
 

@@ -1,6 +1,6 @@
 import { AtributosComunes } from "./AtributosComunes";
 
-enum EstadoDimensiones {
+export enum EstadoDimensiones {
   ACTIVA = "activa",
   DESTRUIDA = "destruida",
   CUARENTENA = "cuarentena"

@@ -1,6 +1,6 @@
 import { AtributosComunes } from "./AtributosComunes";
 
-enum TipoEspecie {
+export enum TipoEspecie {
   HUMANOIDE = "humanoide",
   AMORFO = "amorfo",
   ROBOTICO = "robotico",

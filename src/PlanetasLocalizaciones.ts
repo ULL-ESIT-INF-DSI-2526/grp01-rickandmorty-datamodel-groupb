@@ -1,7 +1,7 @@
 import { AtributosComunes } from "./AtributosComunes";
 import { Dimensiones } from "./Dimensiones";
 
-enum TiposPlanetas {
+export enum TiposPlanetas {
   PLANETA = "planeta",
   ESTACIONESPACIAL= "estación espacial",
   DIMENSIONDEBOLSILLO = "dimensión de bolsillo",
