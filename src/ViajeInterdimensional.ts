@@ -1,6 +1,9 @@
 import { Personajes } from "./Personajes";
 import { Dimensiones } from "./Dimensiones";
 
+/**
+ * Representa un viaje interdimensional completo en memoria.
+ */
 export type ViajeInterdimensional = {
   personaje: Personajes;
   dimensionDestino: Dimensiones;
@@ -8,6 +11,9 @@ export type ViajeInterdimensional = {
   motivo: string;
 }
 
+/**
+ * Estructura serializable de un viaje interdimensional.
+ */
 export interface ViajeInterdimensionalDatos {
   personajeId: string;
   dimensionDestinoId: string;

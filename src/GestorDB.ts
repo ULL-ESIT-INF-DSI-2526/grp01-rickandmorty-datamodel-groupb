@@ -8,6 +8,9 @@ import { Personajes, PersonajeDatos } from "./Personajes";
 import { PlanetasLocalizaciones, PlanetaLocalizacionDatos } from "./PlanetasLocalizaciones";
 import { ViajeInterdimensional, ViajeInterdimensionalDatos } from "./ViajeInterdimensional";
 
+/**
+ * Define la estructura persistida en la base de datos JSON del multiverso.
+ */
 interface EsquemaMultiverso {
   dimensiones: DimensionDatos[];
   personajes: PersonajeDatos[];
@@ -18,6 +21,9 @@ interface EsquemaMultiverso {
   eventosGlobales: string[];
 }
 
+/**
+ * Gestiona la carga y guardado de datos entre memoria y almacenamiento JSON.
+ */
 export class GestorDataBase {
   private dataBase!: Low<EsquemaMultiverso>;
 
@@ -29,7 +35,15 @@ export class GestorDataBase {
   protected viajesInterdimensionales: ViajeInterdimensional[] = [];
   protected eventosGlobales: string[] = [];
 
-  // Función que inicializa la DB
+  /**
+   * Inicializa la base de datos y reconstruye las relaciones entre entidades.
+   *
+   * Este metodo carga primero entidades sin dependencias y despues resuelve
+   * referencias cruzadas para personajes, localizaciones, inventos y viajes.
+   *
+   * @returns Promesa que se resuelve al completar la carga total.
+   * @throws Error Se lanza si una referencia persistida no existe en memoria.
+   */
   protected async InicializarDB() {
     const defaultData: EsquemaMultiverso = {
       dimensiones: [],
@@ -97,7 +111,11 @@ export class GestorDataBase {
     });
   }
 
-  // Función que guarda datos a la DB
+  /**
+   * Convierte las entidades en memoria al formato serializable y las persiste.
+   *
+   * @returns Promesa que se resuelve cuando los cambios quedan escritos en disco.
+   */
   protected async guardarDatos(): Promise<void> {
     this.dataBase.data.dimensiones = this.dimensiones.map(d => ({
       id: d.getId(), nombre: d.getNombre(), estado: d.getEstado(), nivelTec: d.getNivelTec(), descripcion: d.getDesc()

@@ -8,6 +8,12 @@ import { Personajes, Estados, Afiliaciones } from './Personajes';
 import { PlanetasLocalizaciones, TiposPlanetas } from './PlanetasLocalizaciones';
 import { InventosArtefactos, TipoArtefacto } from './InventosArtefactos';
 
+/**
+ * Punto de entrada de la aplicacion de consola.
+ *
+ * Inicializa el gestor del multiverso, muestra alertas globales y mantiene
+ * el bucle principal de navegacion por menus.
+ */
 async function main() {
   const gestor = await GestorMultiverso.getInstance();
   let salir = false;
@@ -51,6 +57,11 @@ async function main() {
   }
 }
 
+/**
+ * Menu de gestion de entidades con opciones para añadir, modificar o eliminar.
+ *
+ * @param gestor Instancia activa del gestor del multiverso.
+ */
 async function menuGestion(gestor: GestorMultiverso) {
   const { entidad, accion } = await prompts([
     {
@@ -224,6 +235,10 @@ async function menuGestion(gestor: GestorMultiverso) {
   }
 }
 
+/**
+ * Ejecuta consultas avanzadas de personajes con filtros y ordenacion.
+ * @param gestor Instancia activa del gestor del multiverso.
+ */
 async function menuConsultarPersonajes(gestor: GestorMultiverso) {
   const p = await prompts([
     { type: 'text', name: 'nombre', message: 'Filtro por nombre (intro para omitir):' },
@@ -255,6 +270,10 @@ async function menuConsultarPersonajes(gestor: GestorMultiverso) {
   console.table(resultados.map(r => ({ ID: r.getId(), Nombre: r.getNombre(), Especie: r.getEspecie().getNombre(), Inteligencia: r.getNivelInteligencia(), Estado: r.getEstado() })));
 }
 
+/**
+ * Ejecuta consultas de localizaciones por filtros simples.
+ * @param gestor Instancia activa del gestor del multiverso.
+ */
 async function menuConsultarLocalizaciones(gestor: GestorMultiverso) {
   const p = await prompts([
     { type: 'text', name: 'nombre', message: 'Filtro por nombre (intro para omitir):' },
@@ -267,6 +286,10 @@ async function menuConsultarLocalizaciones(gestor: GestorMultiverso) {
   console.table(resultados.map(r => ({ ID: r.getId(), Nombre: r.getNombre(), Tipo: r.getTipoPlaneta(), Dimensión: r.getDimension().getNombre() })));
 }
 
+/**
+ * Ejecuta consultas de inventos y artefactos por criterios combinados.
+ * @param gestor Instancia activa del gestor del multiverso.
+ */
 async function menuConsultarInventos(gestor: GestorMultiverso) {
   const p = await prompts([
     { type: 'text', name: 'nombre', message: 'Filtro por nombre (intro para omitir):' },
@@ -283,6 +306,10 @@ async function menuConsultarInventos(gestor: GestorMultiverso) {
   console.table(resultados.map(r => ({ ID: r.getId(), Nombre: r.getNombre(), Tipo: r.getTipo(), Peligro: r.getNivelPeligrosidad(), Inventor: r.getInventor().getNombre() })));
 }
 
+/**
+ * Muestra versiones alternativas de un personaje dado su nombre.
+ * @param gestor Instancia activa del gestor del multiverso.
+ */
 async function localizarAlternativas(gestor: GestorMultiverso) {
   const { nombre } = await prompts({ type: 'text', name: 'nombre', message: 'Introduce el nombre exacto del personaje:' });
   const versiones = gestor.getVersionesAlternativas(nombre);
@@ -290,6 +317,10 @@ async function localizarAlternativas(gestor: GestorMultiverso) {
   console.table(versiones.map(v => ({ ID: v.getId(), Dimensión: v.getDimensionOrigen().getNombre(), Afiliación: v.getAfiliacion(), Estado: v.getEstado() })));
 }
 
+/**
+ * Gestiona el registro de eventos interdimensionales relevantes.
+ * @param gestor Instancia activa del gestor del multiverso.
+ */
 async function menuEventos(gestor: GestorMultiverso) {
   const { tipo } = await prompts({
     type: 'select', name: 'tipo', message: '¿Qué evento deseas registrar?',
@@ -350,6 +381,10 @@ async function menuEventos(gestor: GestorMultiverso) {
   }
 }
 
+/**
+ * Genera informes del estado actual del multiverso.
+ * @param gestor Instancia activa del gestor del multiverso.
+ */
 async function menuInformes(gestor: GestorMultiverso) {
   console.log("\nInformes del multiverso");
   
