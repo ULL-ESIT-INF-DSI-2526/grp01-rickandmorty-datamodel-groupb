@@ -15,6 +15,7 @@ interface EsquemaMultiverso {
   planetasLocalizaciones: PlanetaLocalizacionDatos[];
   inventosArtefactos: InventoArtefactoDatos[];
   viajesInterdimensionales: ViajeInterdimensionalDatos[];
+  eventosGlobales: string[];
 }
 
 export class GestorDataBase {
@@ -26,6 +27,7 @@ export class GestorDataBase {
   protected planetasLocalizaciones: PlanetasLocalizaciones[] = [];
   protected inventosArtefactos: InventosArtefactos[] = [];
   protected viajesInterdimensionales: ViajeInterdimensional[] = [];
+  protected eventosGlobales: string[] = [];
 
   // Función que inicializa la DB
   protected async InicializarDB() {
@@ -35,12 +37,15 @@ export class GestorDataBase {
       especies: [],
       planetasLocalizaciones: [],
       inventosArtefactos: [],
-      viajesInterdimensionales: []
+      viajesInterdimensionales: [],
+      eventosGlobales: []
     }
 
-    this.dataBase = await JSONFilePreset<EsquemaMultiverso>("db.json", defaultData);    
+    this.dataBase = await JSONFilePreset<EsquemaMultiverso>("../db/db.json", defaultData);    
 
     // Cargamos los datos que no tienen dependencias
+    this.eventosGlobales = this.dataBase.data.eventosGlobales || [];
+
     this.dimensiones = this.dataBase.data.dimensiones.map(d => 
       new Dimensiones(d.id, d.nombre, d.estado, d.nivelTec, d.descripcion)
     );
@@ -67,9 +72,14 @@ export class GestorDataBase {
 
     this.inventosArtefactos = this.dataBase.data.inventosArtefactos.map(i => {
       const perReal = this.personajes.find(p => p.getId() === i.inventorId);
-
       if (!perReal) { throw new Error(`Inventor con ${i.inventorId} no encontrado para el invento ${i.id}`); }
-      return new InventosArtefactos(i.id, i.nombre, i.descripcion, perReal, i.tipo, i.nivelPeligrosidad);
+
+      let locReal = null;
+      if (i.localizacionDespliegueId) {
+        locReal = this.planetasLocalizaciones.find(l => l.getId() === i.localizacionDespliegueId) || null;
+      }
+
+      return new InventosArtefactos(i.id, i.nombre, i.descripcion, perReal, i.tipo, i.nivelPeligrosidad, locReal);
     });
 
     // Cargamos los viajes interdimensionales
@@ -77,9 +87,7 @@ export class GestorDataBase {
       const perReal = this.personajes.find(p => p.getId() === v.personajeId);
       const dimReal = this.dimensiones.find(d => d.getId() === v.dimensionDestinoId);
 
-      if (!perReal || !dimReal) { 
-        throw new Error(`Personaje ${v.personajeId} o Dimensión ${v.dimensionDestinoId} no encontrados para el viaje`); 
-      }
+      if (!perReal || !dimReal) { throw new Error(`Personaje ${v.personajeId} o Dimensión ${v.dimensionDestinoId} no encontrados para el viaje`); }
       return {
         personaje: perReal,
         dimensionDestino: dimReal,
@@ -87,7 +95,6 @@ export class GestorDataBase {
         motivo: v.motivo
       };
     });
-
   }
 
   // Función que guarda datos a la DB
@@ -109,12 +116,15 @@ export class GestorDataBase {
     }));
 
     this.dataBase.data.inventosArtefactos = this.inventosArtefactos.map(i => ({
-      id: i.getId(), nombre: i.getNombre(), inventorId: i.getInventor().getId(), tipo: i.getTipo(), nivelPeligrosidad: i.getNivelPeligrosidad(), descripcion: i.getDesc()
+      id: i.getId(), nombre: i.getNombre(), inventorId: i.getInventor().getId(), tipo: i.getTipo(), nivelPeligrosidad: i.getNivelPeligrosidad(), descripcion: i.getDesc(),
+      localizacionDespliegueId: i.getLocalizacionDespliegue()?.getId() || null
     }));
 
     this.dataBase.data.viajesInterdimensionales = this.viajesInterdimensionales.map(v => ({
       personajeId: v.personaje.getId(), dimensionDestinoId: v.dimensionDestino.getId(), fechaViaje: v.fechaViaje, motivo: v.motivo
     }));
+
+    this.dataBase.data.eventosGlobales = this.eventosGlobales;
 
     await this.dataBase.write();
   }

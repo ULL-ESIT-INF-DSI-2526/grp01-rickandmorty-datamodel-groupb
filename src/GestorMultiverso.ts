@@ -27,6 +27,7 @@ export class GestorMultiverso extends GestorDataBase {
   getEspecies(): Especies[] { return this.especies; }
   getPlanetasLocalizaciones(): PlanetasLocalizaciones[] { return this.planetasLocalizaciones; }
   getInventosArtefactos(): InventosArtefactos[] { return this.inventosArtefactos; }
+  getEventosGlobales(): string[] { return this.eventosGlobales; }
 
   // Añadir datos
   async pushDimension(nuevaDimension: Dimensiones) { 
@@ -59,23 +60,56 @@ export class GestorMultiverso extends GestorDataBase {
     await this.guardarDatos();
   }
 
-  // Listado de dimensiones activas con su nivel tecnonlogico
+  public async registrarEventoGlobal(mensaje: string) {
+    const fecha = new Date().toISOString();
+    this.eventosGlobales.push(`[${fecha}] ${mensaje}`);
+    await this.guardarDatos();
+  }
+
+  public async controlarEstadoGlobal(): Promise<string[]> {
+    let alertas: string[] = [];
+    const dimensionesDestruidas = this.dimensiones.filter(d => d.getEstado() === "destruida");
+
+    dimensionesDestruidas.forEach(dim => {
+      const personajesMuertos = this.personajes.filter(p => p.getDimensionOrigen().getId() === dim.getId() && p.getEstado() !== "muerto");
+      personajesMuertos.forEach(p => {
+        alertas.push(`ALERTA: El personaje ${p.getNombre()} (${p.getId()}) proviene de una dimensión DESTRUIDA (${dim.getNombre()}).`);
+      });
+    });
+
+    if (alertas.length > 0) {
+      await this.registrarEventoGlobal(`${alertas.length} personajes afectados por destrucción de dimensiones.`);
+    }
+    return alertas;
+  }
+
+  // Listado de dimensiones activas con su nivel tecnológico medio
   getDimensionesActivas(): Dimensiones[] {
     return this.dimensiones.filter(d => d.getEstado() === "activa");
+  }
+
+  getInformeDimensionesActivas() {
+    const activas = this.getDimensionesActivas();
+    const media = activas.length > 0 ? activas.reduce((sum, dim) => sum + dim.getNivelTec(), 0) / activas.length : 0;
+    return { activas, nivelMedio: media.toFixed(2) };
   }
 
   // Personajes con mayor número de versiones alternativas
   // Mismo nombre con diferente id
   getPersonajesConMasVersionesAlternativas(): Personajes[] {
-    let maxVersiones: number = Math.max(...this.personajes.map(p => this.personajes.filter( p2 => p2.getNombre() === p.getNombre()).length));
+    if (this.personajes.length === 0) { return []; }
+    let maxVersiones: number = Math.max(...this.personajes.map(p => this.personajes.filter(p2 => p2.getNombre() === p.getNombre()).length));
     return this.personajes.filter(p => this.personajes.filter(p2 => p2.getNombre() === p.getNombre()).length === maxVersiones);   
+  }
+
+  getVersionesAlternativas(nombrePersonaje: string): Personajes[] {
+    return this.personajes.filter(p => p.getNombre().toLowerCase() === nombrePersonaje.toLowerCase());
   }
 
   // Inventos más peligrosos desplegados en dimensiones activas | implementación actual retorna cuando peligro >= 8
   // Para sacar la dimensión de un artefacto acceder al atributo de dimensión de origen del inventor
-  getInventosPeligrososEnDimensionesActivas(): InventosArtefactos[] {
-    let inventosEnDimensionesActivas: InventosArtefactos[] = this.inventosArtefactos.filter(invento => this.dimensiones.some(dimension => dimension.getId() === invento.getInventor().getDimensionOrigen().getId() && dimension.getEstado() === "activa"));
-    return inventosEnDimensionesActivas.filter(invento => invento.getNivelPeligrosidad() >= 8);
+  getInventosPeligrososDesplegados(): InventosArtefactos[] {
+    return this.inventosArtefactos.filter(i => i.getNivelPeligrosidad() >= 8 && i.getLocalizacionDespliegue() !== null).sort((a, b) => b.getNivelPeligrosidad() - a.getNivelPeligrosidad());
   }
 
   // Viajes interdimensionales de un personaje especifico por ID
