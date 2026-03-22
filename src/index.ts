@@ -1,4 +1,4 @@
-import prompts from 'prompts'; 
+const prompts = require('prompts');
 import { GestorMultiverso } from './GestorMultiverso';
 import { Dimensiones, EstadoDimensiones } from './Dimensiones';
 
