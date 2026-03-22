@@ -327,4 +327,59 @@ describe('GestorMultiverso', () => {
     expect(alertas).toEqual([]);
     expect(registrarSpy).not.toHaveBeenCalled();
   });
+
+  it('Debe ejecutar el código real de registrarEventoGlobal y guardar el dato', async () => {
+    const gestor = crearGestorVacio();
+    
+    const gestorMutable = gestor as unknown as GestorMutable;
+    const guardarSpy = vi.spyOn(gestorMutable, 'guardarDatos').mockResolvedValue(undefined);
+
+    const eventosAntes = gestor.getEventosGlobales().length;
+    await gestor.registrarEventoGlobal('Evento sin mockear');
+    const eventosDespues = gestor.getEventosGlobales();
+
+    expect(eventosDespues.length).toBe(eventosAntes + 1);
+    expect(eventosDespues[eventosDespues.length - 1]).toContain('Evento sin mockear');
+    expect(guardarSpy).toHaveBeenCalledTimes(1);
+
+    guardarSpy.mockRestore();
+  });
+
+  it('Debe filtrar correctamente forzando condiciones falsas en personajes, localizaciones e inventos', () => {
+    const gestor = crearGestorVacio();
+    const gestorMutable = gestor as unknown as GestorMutable;
+
+    const dim = new Dimensiones('D1', 'Activa', EstadoDimensiones.ACTIVA, 7, 'Desc');
+    const esp = new Especies('E1', 'Humano', 'Tierra', TipoEspecie.HUMANOIDE, 80, 'Desc');
+    const rick = new Personajes('P1', 'Rick', esp, dim, Estados.VIVO, Afiliaciones.INDEPENDIENTE, 10, 'Desc');
+    const loc = new PlanetasLocalizaciones('L1', 'Tierra', TiposPlanetas.PLANETA, dim, 100, 'Desc');
+    const inv = new InventosArtefactos('I1', 'Portal Gun', 'Desc', rick, TipoArtefacto.DISPOSITIVO_DE_VIAJE, 10, null);
+
+    gestorMutable.personajes = [rick];
+    gestorMutable.planetasLocalizaciones = [loc];
+    gestorMutable.inventosArtefactos = [inv];
+
+    // 1. Tests que deben devolver resultados
+    expect(gestor.filtrarPersonajes({}).length).toBe(1);
+    expect(gestor.filtrarLocalizaciones({}).length).toBe(1);
+    expect(gestor.filtrarInventos({}).length).toBe(1);
+    
+    // 2. Filtrar Personajes: Forzar 'coincide = false' en cada propiedad individualmente
+    expect(gestor.filtrarPersonajes({ nombre: 'Morty' }).length).toBe(0); // Falla nombre
+    expect(gestor.filtrarPersonajes({ especieId: 'E99' }).length).toBe(0); // Falla especieId
+    expect(gestor.filtrarPersonajes({ afiliacion: Afiliaciones.FAMILIA_SMITH }).length).toBe(0); // Falla afiliación
+    expect(gestor.filtrarPersonajes({ estado: Estados.MUERTO }).length).toBe(0); // Falla estado
+    expect(gestor.filtrarPersonajes({ dimensionId: 'D99' }).length).toBe(0); // Falla dimensionId
+
+    // 3. Filtrar Localizaciones: Forzar 'coincide = false' en cada propiedad
+    expect(gestor.filtrarLocalizaciones({ nombre: 'Marte' }).length).toBe(0); // Falla nombre
+    expect(gestor.filtrarLocalizaciones({ tipo: TiposPlanetas.ESTACIONESPACIAL }).length).toBe(0); // Falla tipo
+    expect(gestor.filtrarLocalizaciones({ dimensionId: 'D99' }).length).toBe(0); // Falla dimensionId
+
+    // 4. Filtrar Inventos: Forzar 'coincide = false' en cada propiedad
+    expect(gestor.filtrarInventos({ nombre: 'Rayo' }).length).toBe(0); // Falla nombre
+    expect(gestor.filtrarInventos({ tipo: TipoArtefacto.ARMA }).length).toBe(0); // Falla tipo
+    expect(gestor.filtrarInventos({ inventorId: 'P99' }).length).toBe(0); // Falla inventorId
+    expect(gestor.filtrarInventos({ peligrosidad: 5 }).length).toBe(0); // Falla peligrosidad
+  });
 });

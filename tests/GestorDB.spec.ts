@@ -131,4 +131,82 @@ describe('GestorDB', () => {
 
     expect(gestor.getTestEventosGlobales()).toEqual([]);
   });
+
+  it('Debe lanzar error si faltan dependencias (Personaje sin Dimensión)', async () => {
+    mockDBData = {
+      dimensiones: [], // Sin dimensiones
+      especies: [{ id: 'E1', nombre: 'Esp', origen: 'Ori', tipo: TipoEspecie.HUMANOIDE, esperanzaVida: 100, descripcion: 'Desc' }],
+      planetasLocalizaciones: [],
+      personajes: [{ id: 'P1', nombre: 'Fallo', dimensionOrigenId: 'D999', especieId: 'E1', estado: Estados.VIVO, afiliacion: Afiliaciones.INDEPENDIENTE, nivelInteligencia: 10, descripcion: 'Desc' }],
+      inventosArtefactos: [], viajesInterdimensionales: [], eventosGlobales: []
+    };
+    const gestor = new TestGestorDB();
+    await expect(gestor.testInit()).rejects.toThrow('no existe o bien especie');
+  });
+
+  it('Debe lanzar error si faltan dependencias (Invento sin Inventor)', async () => {
+    mockDBData = {
+      dimensiones: [], especies: [], planetasLocalizaciones: [], personajes: [],
+      inventosArtefactos: [{ id: 'I1', nombre: 'Inv', inventorId: 'P999', tipo: TipoArtefacto.ARMA, nivelPeligrosidad: 5, descripcion: 'Desc', localizacionDespliegueId: null }],
+      viajesInterdimensionales: [], eventosGlobales: []
+    };
+    const gestor = new TestGestorDB();
+    await expect(gestor.testInit()).rejects.toThrow('no encontrado para el invento');
+  });
+
+  it('Debe asignar null a localizacionDespliegue si el ID referenciado no existe', async () => {
+    mockDBData = {
+      dimensiones: [{ id: 'D1', nombre: 'Dim', estado: EstadoDimensiones.ACTIVA, nivelTec: 1, descripcion: 'Desc' }],
+      especies: [{ id: 'E1', nombre: 'Esp', origen: 'Ori', tipo: TipoEspecie.HUMANOIDE, esperanzaVida: 100, descripcion: 'Desc' }],
+      planetasLocalizaciones: [], // Lista vacía, por lo que 'L999' no se encontrará
+      personajes: [{ id: 'P1', nombre: 'Per', dimensionOrigenId: 'D1', especieId: 'E1', estado: Estados.VIVO, afiliacion: Afiliaciones.INDEPENDIENTE, nivelInteligencia: 10, descripcion: 'Desc' }],
+      inventosArtefactos: [{ id: 'I1', nombre: 'Inv', inventorId: 'P1', tipo: TipoArtefacto.ARMA, nivelPeligrosidad: 5, descripcion: 'Desc', localizacionDespliegueId: 'L999' }],
+      viajesInterdimensionales: [], eventosGlobales: []
+    };
+    const gestor = new TestGestorDB();
+    await gestor.testInit();
+    
+    expect(gestor.getTestInventos()[0].getLocalizacionDespliegue()).toBeNull();
+  });
+
+  it('Debe lanzar error si faltan dependencias (Viaje sin Personaje)', async () => {
+    mockDBData = {
+      dimensiones: [{ id: 'D1', nombre: 'Dim', estado: EstadoDimensiones.ACTIVA, nivelTec: 1, descripcion: 'Desc' }],
+      especies: [], planetasLocalizaciones: [], personajes: [],
+      inventosArtefactos: [],
+      viajesInterdimensionales: [{ personajeId: 'P999', dimensionDestinoId: 'D1', fechaViaje: new Date(), motivo: 'test' }],
+      eventosGlobales: []
+    };
+    const gestor = new TestGestorDB();
+    await expect(gestor.testInit()).rejects.toThrow('no encontrados para el viaje');
+  });
+
+  it('Debe lanzar error si faltan dependencias (Viaje sin Dimensión)', async () => {
+    mockDBData = {
+      dimensiones: [],
+      especies: [{ id: 'E1', nombre: 'Esp', origen: 'Ori', tipo: TipoEspecie.HUMANOIDE, esperanzaVida: 100, descripcion: 'Desc' }],
+      planetasLocalizaciones: [],
+      personajes: [{ id: 'P1', nombre: 'Per', dimensionOrigenId: 'D1', especieId: 'E1', estado: Estados.VIVO, afiliacion: Afiliaciones.INDEPENDIENTE, nivelInteligencia: 10, descripcion: 'Desc' }],
+      inventosArtefactos: [],
+      viajesInterdimensionales: [{ personajeId: 'P1', dimensionDestinoId: 'D999', fechaViaje: new Date(), motivo: 'test' }],
+      eventosGlobales: []
+    };
+    const gestor = new TestGestorDB();
+    await expect(gestor.testInit()).rejects.toThrow('no existe o bien especie');
+  });
+
+  it('Debe procesar correctamente un invento que tiene localizacionDespliegueId como null en el JSON', async () => {
+    mockDBData = {
+      dimensiones: [{ id: 'D1', nombre: 'Dim', estado: EstadoDimensiones.ACTIVA, nivelTec: 1, descripcion: 'Desc' }],
+      especies: [{ id: 'E1', nombre: 'Esp', origen: 'Ori', tipo: TipoEspecie.HUMANOIDE, esperanzaVida: 100, descripcion: 'Desc' }],
+      planetasLocalizaciones: [],
+      personajes: [{ id: 'P1', nombre: 'Per', dimensionOrigenId: 'D1', especieId: 'E1', estado: Estados.VIVO, afiliacion: Afiliaciones.INDEPENDIENTE, nivelInteligencia: 10, descripcion: 'Desc' }],
+      inventosArtefactos: [{ id: 'I1', nombre: 'Inv', inventorId: 'P1', tipo: TipoArtefacto.ARMA, nivelPeligrosidad: 5, descripcion: 'Desc', localizacionDespliegueId: null }],
+      viajesInterdimensionales: [], eventosGlobales: []
+    };
+    const gestor = new TestGestorDB();
+    await gestor.testInit();
+    
+    expect(gestor.getTestInventos()[0].getLocalizacionDespliegue()).toBeNull();
+  });
 });
