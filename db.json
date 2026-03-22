@@ -1,103 +1,778 @@
 {
   "dimensiones": [
-    { "id": "D1", "nombre": "C-137", "estado": "activa", "nivelTec": 10, "descripcion": "Universo principal de origen de nuestro Rick." },
-    { "id": "D2", "nombre": "Dimensión Cronenberg", "estado": "cuarentena", "nivelTec": 8, "descripcion": "Arruinada por una mutación a escala global." },
-    { "id": "D3", "nombre": "J19Z7", "estado": "activa", "nivelTec": 9, "descripcion": "Hogar de Doofus Rick. La gente come sus propias heces." },
-    { "id": "D4", "nombre": "Burbuja de Mantequilla", "estado": "destruida", "nivelTec": 4, "descripcion": "Una dimensión hecha de lácteos, colapsada." },
-    { "id": "D5", "nombre": "Dimensión Fart", "estado": "activa", "nivelTec": 10, "descripcion": "Habitada por seres gaseosos de energía pura." },
-    { "id": "D6", "nombre": "Dimensión Purga", "estado": "activa", "nivelTec": 5, "descripcion": "Sociedad pacífica con un festival anual de masacre." },
-    { "id": "D7", "nombre": "Dimensión Tóxica", "estado": "cuarentena", "nivelTec": 7, "descripcion": "Lugar de destierro para las toxinas emocionales." },
-    { "id": "D8", "nombre": "Miniverso", "estado": "activa", "nivelTec": 8, "descripcion": "Universo creado por Zeep Xanflorp." },
-    { "id": "D9", "nombre": "Teenyverso", "estado": "activa", "nivelTec": 6, "descripcion": "Universo dentro del Miniverso." },
-    { "id": "D10", "nombre": "Microverso", "estado": "activa", "nivelTec": 9, "descripcion": "Batería del coche de Rick." },
-    { "id": "D11", "nombre": "Dimensión Silla", "estado": "activa", "nivelTec": 7, "descripcion": "Las sillas se sientan en personas." },
-    { "id": "D12", "nombre": "Dimensión Pizza", "estado": "activa", "nivelTec": 7, "descripcion": "Las pizzas piden humanos por teléfono." },
-    { "id": "D13", "nombre": "Dimensión Teléfono", "estado": "activa", "nivelTec": 7, "descripcion": "Los teléfonos usan sillas para pedir pizzas." },
-    { "id": "D14", "nombre": "C-500A", "estado": "activa", "nivelTec": 9, "descripcion": "Dimensión estándar de reemplazo." },
-    { "id": "D15", "nombre": "Dimensión Fascista", "estado": "destruida", "nivelTec": 8, "descripcion": "Demasiado fascista para sobrevivir." }
+    {
+      "id": "D1",
+      "nombre": "C-137",
+      "estado": "activa",
+      "nivelTec": 10,
+      "descripcion": "Universo principal de origen de nuestro Rick."
+    },
+    {
+      "id": "D2",
+      "nombre": "Dimensión Cronenberg",
+      "estado": "cuarentena",
+      "nivelTec": 8,
+      "descripcion": "Arruinada por una mutación a escala global."
+    },
+    {
+      "id": "D3",
+      "nombre": "J19Z7",
+      "estado": "activa",
+      "nivelTec": 9,
+      "descripcion": "Hogar de Doofus Rick. La gente come sus propias heces."
+    },
+    {
+      "id": "D4",
+      "nombre": "Burbuja de Mantequilla",
+      "estado": "destruida",
+      "nivelTec": 4,
+      "descripcion": "Una dimensión hecha de lácteos, colapsada."
+    },
+    {
+      "id": "D5",
+      "nombre": "Dimensión Fart",
+      "estado": "activa",
+      "nivelTec": 10,
+      "descripcion": "Habitada por seres gaseosos de energía pura."
+    },
+    {
+      "id": "D6",
+      "nombre": "Dimensión Purga",
+      "estado": "activa",
+      "nivelTec": 5,
+      "descripcion": "Sociedad pacífica con un festival anual de masacre."
+    },
+    {
+      "id": "D7",
+      "nombre": "Dimensión Tóxica",
+      "estado": "cuarentena",
+      "nivelTec": 7,
+      "descripcion": "Lugar de destierro para las toxinas emocionales."
+    },
+    {
+      "id": "D8",
+      "nombre": "Miniverso",
+      "estado": "activa",
+      "nivelTec": 8,
+      "descripcion": "Universo creado por Zeep Xanflorp."
+    },
+    {
+      "id": "D9",
+      "nombre": "Teenyverso",
+      "estado": "activa",
+      "nivelTec": 6,
+      "descripcion": "Universo dentro del Miniverso."
+    },
+    {
+      "id": "D10",
+      "nombre": "Microverso",
+      "estado": "activa",
+      "nivelTec": 9,
+      "descripcion": "Batería del coche de Rick."
+    },
+    {
+      "id": "D11",
+      "nombre": "Dimensión Silla",
+      "estado": "activa",
+      "nivelTec": 7,
+      "descripcion": "Las sillas se sientan en personas."
+    },
+    {
+      "id": "D12",
+      "nombre": "Dimensión Pizza",
+      "estado": "activa",
+      "nivelTec": 7,
+      "descripcion": "Las pizzas piden humanos por teléfono."
+    },
+    {
+      "id": "D13",
+      "nombre": "Dimensión Teléfono",
+      "estado": "activa",
+      "nivelTec": 7,
+      "descripcion": "Los teléfonos usan sillas para pedir pizzas."
+    },
+    {
+      "id": "D14",
+      "nombre": "C-500A",
+      "estado": "activa",
+      "nivelTec": 9,
+      "descripcion": "Dimensión estándar de reemplazo."
+    },
+    {
+      "id": "D15",
+      "nombre": "Dimensión Fascista",
+      "estado": "destruida",
+      "nivelTec": 8,
+      "descripcion": "Demasiado fascista para sobrevivir."
+    }
   ],
   "especies": [
-    { "id": "S1", "nombre": "Humano", "origen": "Tierra", "tipo": "humanoide", "esperanzaVida": 80, "descripcion": "Bípedos estándar obsesionados con la cultura pop." },
-    { "id": "S2", "nombre": "Cronenberg", "origen": "Tierra Cronenberg", "tipo": "amorfo", "esperanzaVida": 120, "descripcion": "Masas de carne mutante." },
-    { "id": "S3", "nombre": "Gazorpiano", "origen": "Gazorpazorp", "tipo": "humanoide", "esperanzaVida": 60, "descripcion": "Gobernados por mujeres; machos violentos con brazos en la cabeza." },
-    { "id": "S4", "nombre": "Meeseeks", "origen": "Caja de Meeseeks", "tipo": "amorfo", "esperanzaVida": 1, "descripcion": "Existen solo para cumplir un propósito y desaparecer." },
-    { "id": "S5", "nombre": "Zigerion", "origen": "Simulador Zigerion", "tipo": "humanoide", "esperanzaVida": 90, "descripcion": "Estafadores intergalácticos con fobia a la desnudez." },
-    { "id": "S6", "nombre": "Gromflomite", "origen": "Planeta Gromflom Prime", "tipo": "humanoide", "esperanzaVida": 150, "descripcion": "Insectoides burócratas de la Federación Galáctica." },
-    { "id": "S7", "nombre": "Cyborg Reemplazo", "origen": "Ciudadela", "tipo": "robotico", "esperanzaVida": 500, "descripcion": "Copias sintéticas de seres orgánicos." },
-    { "id": "S8", "nombre": "Parásito de Memoria", "origen": "Desconocido", "tipo": "parasito", "esperanzaVida": 5, "descripcion": "Se implantan en recuerdos felices." },
-    { "id": "S9", "nombre": "Asimilador", "origen": "Unidad Prime", "tipo": "hivemind", "esperanzaVida": 9999, "descripcion": "Mente colmena que asimila poblaciones enteras." },
-    { "id": "S10", "nombre": "Persona Engranaje", "origen": "Planeta Gear", "tipo": "robotico", "esperanzaVida": 300, "descripcion": "Seres biológicos compuestos de engranajes." }
+    {
+      "id": "S1",
+      "nombre": "Humano",
+      "origen": "Tierra",
+      "tipo": "humanoide",
+      "esperanzaVida": 80,
+      "descripcion": "Bípedos estándar obsesionados con la cultura pop."
+    },
+    {
+      "id": "S2",
+      "nombre": "Cronenberg",
+      "origen": "Tierra Cronenberg",
+      "tipo": "amorfo",
+      "esperanzaVida": 120,
+      "descripcion": "Masas de carne mutante."
+    },
+    {
+      "id": "S3",
+      "nombre": "Gazorpiano",
+      "origen": "Gazorpazorp",
+      "tipo": "humanoide",
+      "esperanzaVida": 60,
+      "descripcion": "Gobernados por mujeres; machos violentos con brazos en la cabeza."
+    },
+    {
+      "id": "S4",
+      "nombre": "Meeseeks",
+      "origen": "Caja de Meeseeks",
+      "tipo": "amorfo",
+      "esperanzaVida": 1,
+      "descripcion": "Existen solo para cumplir un propósito y desaparecer."
+    },
+    {
+      "id": "S5",
+      "nombre": "Zigerion",
+      "origen": "Simulador Zigerion",
+      "tipo": "humanoide",
+      "esperanzaVida": 90,
+      "descripcion": "Estafadores intergalácticos con fobia a la desnudez."
+    },
+    {
+      "id": "S6",
+      "nombre": "Gromflomite",
+      "origen": "Planeta Gromflom Prime",
+      "tipo": "humanoide",
+      "esperanzaVida": 150,
+      "descripcion": "Insectoides burócratas de la Federación Galáctica."
+    },
+    {
+      "id": "S7",
+      "nombre": "Cyborg Reemplazo",
+      "origen": "Ciudadela",
+      "tipo": "robotico",
+      "esperanzaVida": 500,
+      "descripcion": "Copias sintéticas de seres orgánicos."
+    },
+    {
+      "id": "S8",
+      "nombre": "Parásito de Memoria",
+      "origen": "Desconocido",
+      "tipo": "parasito",
+      "esperanzaVida": 5,
+      "descripcion": "Se implantan en recuerdos felices."
+    },
+    {
+      "id": "S9",
+      "nombre": "Asimilador",
+      "origen": "Unidad Prime",
+      "tipo": "hivemind",
+      "esperanzaVida": 9999,
+      "descripcion": "Mente colmena que asimila poblaciones enteras."
+    },
+    {
+      "id": "S10",
+      "nombre": "Persona Engranaje",
+      "origen": "Planeta Gear",
+      "tipo": "robotico",
+      "esperanzaVida": 300,
+      "descripcion": "Seres biológicos compuestos de engranajes."
+    }
   ],
   "planetasLocalizaciones": [
-    { "id": "L1", "nombre": "Tierra C-137", "tipoPlaneta": "planeta", "dimensionId": "D1", "poblacion": 7000000000, "descripcion": "La Tierra original de nuestro Rick." },
-    { "id": "L2", "nombre": "Ciudadela de los Ricks", "tipoPlaneta": "estación espacial", "dimensionId": "D1", "poblacion": 5000000, "descripcion": "Punto de encuentro de Ricks y Mortys." },
-    { "id": "L3", "nombre": "Planeta Gazorpazorp", "tipoPlaneta": "planeta", "dimensionId": "D3", "poblacion": 80000000, "descripcion": "Sociedad dividida por géneros." },
-    { "id": "L4", "nombre": "Tierra Cronenberg", "tipoPlaneta": "planeta", "dimensionId": "D2", "poblacion": 2000000000, "descripcion": "Infestada de monstruos carnosos." },
-    { "id": "L5", "nombre": "Anatomy Park", "tipoPlaneta": "dimensión de bolsillo", "dimensionId": "D1", "poblacion": 500, "descripcion": "Parque temático dentro de un vagabundo." },
-    { "id": "L6", "nombre": "Simulador Zigerion", "tipoPlaneta": "simulación virtual", "dimensionId": "D1", "poblacion": 0, "descripcion": "Usado para extraer la receta de la materia oscura." },
-    { "id": "L7", "nombre": "Planeta Purga", "tipoPlaneta": "planeta", "dimensionId": "D6", "poblacion": 3000000, "descripcion": "Viven en el siglo XIX, masacrándose anualmente." },
-    { "id": "L8", "nombre": "Planeta Squanch", "tipoPlaneta": "planeta", "dimensionId": "D14", "poblacion": 50000, "descripcion": "Hogar de Squanchy, invadido por la Federación." },
-    { "id": "L9", "nombre": "Blips and Chitz", "tipoPlaneta": "estación espacial", "dimensionId": "D3", "poblacion": 10000, "descripcion": "El mejor salón recreativo del multiverso." },
-    { "id": "L10", "nombre": "Batería de Rick", "tipoPlaneta": "dimensión de bolsillo", "dimensionId": "D10", "poblacion": 900000000, "descripcion": "Un universo entero trabajando para arrancar un coche." },
-    { "id": "L11", "nombre": "Miniverso de Zeep", "tipoPlaneta": "dimensión de bolsillo", "dimensionId": "D8", "poblacion": 500000000, "descripcion": "Batería fractal creada por Zeep." },
-    { "id": "L12", "nombre": "Mundo de Sillas", "tipoPlaneta": "planeta", "dimensionId": "D11", "poblacion": 4000000000, "descripcion": "Planeta gobernado por mobiliario antropomórfico." },
-    { "id": "L13", "nombre": "Mundo de Pizzas", "tipoPlaneta": "planeta", "dimensionId": "D12", "poblacion": 2000000000, "descripcion": "Pizzas gigantes y conscientes." },
-    { "id": "L14", "nombre": "Mundo de Teléfonos", "tipoPlaneta": "planeta", "dimensionId": "D13", "poblacion": 6000000000, "descripcion": "Teléfonos que odian a las personas." },
-    { "id": "L15", "nombre": "Tierra Fascista", "tipoPlaneta": "planeta", "dimensionId": "D15", "poblacion": 1000000000, "descripcion": "Destruida por sus propias políticas totalitarias." },
-    { "id": "L16", "nombre": "Tierra Tóxica", "tipoPlaneta": "planeta", "dimensionId": "D7", "poblacion": 7000000000, "descripcion": "La encarnación física de los problemas emocionales." },
-    { "id": "L17", "nombre": "Nido de Parásitos", "tipoPlaneta": "planeta", "dimensionId": "D1", "poblacion": 100000, "descripcion": "Asteroide infectado de donde provienen los parásitos." },
-    { "id": "L18", "nombre": "Planeta Asimilado", "tipoPlaneta": "planeta", "dimensionId": "D1", "poblacion": 15000000000, "descripcion": "Completamente bajo el control de Unity." },
-    { "id": "L19", "nombre": "Planeta Gear", "tipoPlaneta": "planeta", "dimensionId": "D1", "poblacion": 4000000000, "descripcion": "Centro de la industria relojera cósmica." },
-    { "id": "L20", "nombre": "Prisión de Máxima Seguridad", "tipoPlaneta": "estación espacial", "dimensionId": "D1", "poblacion": 800000, "descripcion": "Controlada por la Federación Galáctica." }
+    {
+      "id": "L1",
+      "nombre": "Tierra C-137",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D1",
+      "poblacion": 7000000000,
+      "descripcion": "La Tierra original de nuestro Rick."
+    },
+    {
+      "id": "L2",
+      "nombre": "Ciudadela de los Ricks",
+      "tipoPlaneta": "estación espacial",
+      "dimensionId": "D1",
+      "poblacion": 5000000,
+      "descripcion": "Punto de encuentro de Ricks y Mortys."
+    },
+    {
+      "id": "L3",
+      "nombre": "Planeta Gazorpazorp",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D3",
+      "poblacion": 80000000,
+      "descripcion": "Sociedad dividida por géneros."
+    },
+    {
+      "id": "L4",
+      "nombre": "Tierra Cronenberg",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D2",
+      "poblacion": 2000000000,
+      "descripcion": "Infestada de monstruos carnosos."
+    },
+    {
+      "id": "L5",
+      "nombre": "Anatomy Park",
+      "tipoPlaneta": "dimensión de bolsillo",
+      "dimensionId": "D1",
+      "poblacion": 500,
+      "descripcion": "Parque temático dentro de un vagabundo."
+    },
+    {
+      "id": "L6",
+      "nombre": "Simulador Zigerion",
+      "tipoPlaneta": "simulación virtual",
+      "dimensionId": "D1",
+      "poblacion": 0,
+      "descripcion": "Usado para extraer la receta de la materia oscura."
+    },
+    {
+      "id": "L7",
+      "nombre": "Planeta Purga",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D6",
+      "poblacion": 3000000,
+      "descripcion": "Viven en el siglo XIX, masacrándose anualmente."
+    },
+    {
+      "id": "L8",
+      "nombre": "Planeta Squanch",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D14",
+      "poblacion": 50000,
+      "descripcion": "Hogar de Squanchy, invadido por la Federación."
+    },
+    {
+      "id": "L9",
+      "nombre": "Blips and Chitz",
+      "tipoPlaneta": "estación espacial",
+      "dimensionId": "D3",
+      "poblacion": 10000,
+      "descripcion": "El mejor salón recreativo del multiverso."
+    },
+    {
+      "id": "L10",
+      "nombre": "Batería de Rick",
+      "tipoPlaneta": "dimensión de bolsillo",
+      "dimensionId": "D10",
+      "poblacion": 900000000,
+      "descripcion": "Un universo entero trabajando para arrancar un coche."
+    },
+    {
+      "id": "L11",
+      "nombre": "Miniverso de Zeep",
+      "tipoPlaneta": "dimensión de bolsillo",
+      "dimensionId": "D8",
+      "poblacion": 500000000,
+      "descripcion": "Batería fractal creada por Zeep."
+    },
+    {
+      "id": "L12",
+      "nombre": "Mundo de Sillas",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D11",
+      "poblacion": 4000000000,
+      "descripcion": "Planeta gobernado por mobiliario antropomórfico."
+    },
+    {
+      "id": "L13",
+      "nombre": "Mundo de Pizzas",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D12",
+      "poblacion": 2000000000,
+      "descripcion": "Pizzas gigantes y conscientes."
+    },
+    {
+      "id": "L14",
+      "nombre": "Mundo de Teléfonos",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D13",
+      "poblacion": 6000000000,
+      "descripcion": "Teléfonos que odian a las personas."
+    },
+    {
+      "id": "L15",
+      "nombre": "Tierra Fascista",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D15",
+      "poblacion": 1000000000,
+      "descripcion": "Destruida por sus propias políticas totalitarias."
+    },
+    {
+      "id": "L16",
+      "nombre": "Tierra Tóxica",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D7",
+      "poblacion": 7000000000,
+      "descripcion": "La encarnación física de los problemas emocionales."
+    },
+    {
+      "id": "L17",
+      "nombre": "Nido de Parásitos",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D1",
+      "poblacion": 100000,
+      "descripcion": "Asteroide infectado de donde provienen los parásitos."
+    },
+    {
+      "id": "L18",
+      "nombre": "Planeta Asimilado",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D1",
+      "poblacion": 15000000000,
+      "descripcion": "Completamente bajo el control de Unity."
+    },
+    {
+      "id": "L19",
+      "nombre": "Planeta Gear",
+      "tipoPlaneta": "planeta",
+      "dimensionId": "D1",
+      "poblacion": 4000000000,
+      "descripcion": "Centro de la industria relojera cósmica."
+    },
+    {
+      "id": "L20",
+      "nombre": "Prisión de Máxima Seguridad",
+      "tipoPlaneta": "estación espacial",
+      "dimensionId": "D1",
+      "poblacion": 800000,
+      "descripcion": "Controlada por la Federación Galáctica."
+    }
   ],
   "personajes": [
-    { "id": "C1", "nombre": "Rick Sanchez", "especieId": "S1", "dimensionOrigenId": "D1", "estado": "vivo", "afiliacion": "independiente", "nivelInteligencia": 10, "descripcion": "El Rick más Rick de todos." },
-    { "id": "C2", "nombre": "Morty Smith", "especieId": "S1", "dimensionOrigenId": "D1", "estado": "vivo", "afiliacion": "familia smith", "nivelInteligencia": 5, "descripcion": "El compañero nervioso de Rick." },
-    { "id": "C3", "nombre": "Rick Sanchez", "especieId": "S1", "dimensionOrigenId": "D2", "estado": "muerto", "afiliacion": "independiente", "nivelInteligencia": 10, "descripcion": "Rick Prime, el verdadero enemigo." },
-    { "id": "C4", "nombre": "Morty Smith", "especieId": "S1", "dimensionOrigenId": "D3", "estado": "vivo", "afiliacion": "independiente", "nivelInteligencia": 9, "descripcion": "Morty Malvado (Evil Morty)." },
-    { "id": "C5", "nombre": "Rick Sanchez", "especieId": "S1", "dimensionOrigenId": "D3", "estado": "vivo", "afiliacion": "consejo de ricks", "nivelInteligencia": 8, "descripcion": "Doofus Rick, no es tan tonto como parece." },
-    { "id": "C6", "nombre": "Morty Smith", "especieId": "S1", "dimensionOrigenId": "D3", "estado": "vivo", "afiliacion": "consejo de ricks", "nivelInteligencia": 4, "descripcion": "Eric Stoltz Mask Morty." },
-    { "id": "C7", "nombre": "Rick Sanchez", "especieId": "S1", "dimensionOrigenId": "D15", "estado": "muerto", "afiliacion": "independiente", "nivelInteligencia": 7, "descripcion": "Rick Fascista, le gustan los regímenes autoritarios." },
-    { "id": "C8", "nombre": "Morty Smith", "especieId": "S1", "dimensionOrigenId": "D15", "estado": "muerto", "afiliacion": "independiente", "nivelInteligencia": 4, "descripcion": "Morty Fascista." },
-    { "id": "C9", "nombre": "Summer Smith", "especieId": "S1", "dimensionOrigenId": "D1", "estado": "vivo", "afiliacion": "familia smith", "nivelInteligencia": 7, "descripcion": "La hermana mayor." },
-    { "id": "C10", "nombre": "Beth Smith", "especieId": "S1", "dimensionOrigenId": "D1", "estado": "vivo", "afiliacion": "familia smith", "nivelInteligencia": 8, "descripcion": "Cirujana de caballos con problemas de abandono." },
-    { "id": "C11", "nombre": "Jerry Smith", "especieId": "S1", "dimensionOrigenId": "D1", "estado": "vivo", "afiliacion": "familia smith", "nivelInteligencia": 3, "descripcion": "Desempleado y un poco patético." },
-    { "id": "C12", "nombre": "Hombre Pájaro", "especieId": "S1", "dimensionOrigenId": "D1", "estado": "robot-sustituto", "afiliacion": "independiente", "nivelInteligencia": 8, "descripcion": "Mejor amigo de Rick, convertido en Phoenixperson." },
-    { "id": "C13", "nombre": "Squanchy", "especieId": "S2", "dimensionOrigenId": "D1", "estado": "desconocido", "afiliacion": "independiente", "nivelInteligencia": 6, "descripcion": "Le encanta squanchear en los armarios." },
-    { "id": "C14", "nombre": "Mr. Meeseeks", "especieId": "S4", "dimensionOrigenId": "D1", "estado": "muerto", "afiliacion": "independiente", "nivelInteligencia": 5, "descripcion": "¡Mírame! Soy el Señor Meeseeks." },
-    { "id": "C15", "nombre": "Zeep Xanflorp", "especieId": "S1", "dimensionOrigenId": "D10", "estado": "vivo", "afiliacion": "independiente", "nivelInteligencia": 9, "descripcion": "Científico engreído del Microverso." },
-    { "id": "C16", "nombre": "Cornelius", "especieId": "S6", "dimensionOrigenId": "D1", "estado": "muerto", "afiliacion": "federación galáctica", "nivelInteligencia": 7, "descripcion": "Agente Gromflomite." },
-    { "id": "C17", "nombre": "Unidad", "especieId": "S9", "dimensionOrigenId": "D1", "estado": "vivo", "afiliacion": "independiente", "nivelInteligencia": 10, "descripcion": "Ex-amante de Rick, asimiladora de mundos." },
-    { "id": "C18", "nombre": "Gearhead", "especieId": "S10", "dimensionOrigenId": "D1", "estado": "vivo", "afiliacion": "independiente", "nivelInteligencia": 6, "descripcion": "Sabe mucho sobre las Gear Wars." },
-    { "id": "C19", "nombre": "Rick Sanchez", "especieId": "S2", "dimensionOrigenId": "D2", "estado": "vivo", "afiliacion": "independiente", "nivelInteligencia": 9, "descripcion": "Versión Cronenberg de Rick." },
-    { "id": "C20", "nombre": "Morty Smith", "especieId": "S2", "dimensionOrigenId": "D2", "estado": "vivo", "afiliacion": "familia smith", "nivelInteligencia": 4, "descripcion": "Versión Cronenberg de Morty." },
-    { "id": "C21", "nombre": "Rick Tóxico", "especieId": "S1", "dimensionOrigenId": "D7", "estado": "muerto", "afiliacion": "independiente", "nivelInteligencia": 9, "descripcion": "Pura toxicidad emocional." },
-    { "id": "C22", "nombre": "Morty Tóxico", "especieId": "S1", "dimensionOrigenId": "D7", "estado": "muerto", "afiliacion": "familia smith", "nivelInteligencia": 4, "descripcion": "Masa de autodesprecio." },
-    { "id": "C23", "nombre": "Rick Sanchez", "especieId": "S1", "dimensionOrigenId": "D1", "estado": "vivo", "afiliacion": "consejo de ricks", "nivelInteligencia": 6, "descripcion": "Rick Policía de la Ciudadela." },
-    { "id": "C24", "nombre": "Morty Smith", "especieId": "S1", "dimensionOrigenId": "D1", "estado": "vivo", "afiliacion": "consejo de ricks", "nivelInteligencia": 5, "descripcion": "Morty Policía corrupto." },
-    { "id": "C25", "nombre": "Rick Sanchez", "especieId": "S1", "dimensionOrigenId": "D11", "estado": "vivo", "afiliacion": "independiente", "nivelInteligencia": 7, "descripcion": "Rick con forma de silla." },
-    { "id": "C26", "nombre": "Rick Sanchez", "especieId": "S1", "dimensionOrigenId": "D12", "estado": "vivo", "afiliacion": "independiente", "nivelInteligencia": 7, "descripcion": "Rick con forma de pizza." },
-    { "id": "C27", "nombre": "Rick Sanchez", "especieId": "S1", "dimensionOrigenId": "D13", "estado": "vivo", "afiliacion": "independiente", "nivelInteligencia": 7, "descripcion": "Rick con forma de teléfono." },
-    { "id": "C28", "nombre": "Jerry Prime", "especieId": "S1", "dimensionOrigenId": "D2", "estado": "muerto", "afiliacion": "independiente", "nivelInteligencia": 5, "descripcion": "Sobreviviente post-apocalíptico rudo." },
-    { "id": "C29", "nombre": "Space Beth", "especieId": "S1", "dimensionOrigenId": "D1", "estado": "vivo", "afiliacion": "independiente", "nivelInteligencia": 8, "descripcion": "Clon (o no) rebelde de Beth." },
-    { "id": "C30", "nombre": "Sleepy Gary", "especieId": "S8", "dimensionOrigenId": "D1", "estado": "muerto", "afiliacion": "independiente", "nivelInteligencia": 6, "descripcion": "Amante imaginario de Jerry." }
+    {
+      "id": "C1",
+      "nombre": "Rick Sanchez",
+      "dimensionOrigenId": "D1",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 10,
+      "descripcion": "El Rick más Rick de todos."
+    },
+    {
+      "id": "C2",
+      "nombre": "Morty Smith",
+      "dimensionOrigenId": "D1",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "familia smith",
+      "nivelInteligencia": 5,
+      "descripcion": "El compañero nervioso de Rick."
+    },
+    {
+      "id": "C3",
+      "nombre": "Rick Sanchez",
+      "dimensionOrigenId": "D2",
+      "especieId": "S1",
+      "estado": "muerto",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 10,
+      "descripcion": "Rick Prime, el verdadero enemigo."
+    },
+    {
+      "id": "C4",
+      "nombre": "Morty Smith",
+      "dimensionOrigenId": "D3",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 9,
+      "descripcion": "Morty Malvado (Evil Morty)."
+    },
+    {
+      "id": "C5",
+      "nombre": "Rick Sanchez",
+      "dimensionOrigenId": "D3",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "consejo de ricks",
+      "nivelInteligencia": 8,
+      "descripcion": "Doofus Rick, no es tan tonto como parece."
+    },
+    {
+      "id": "C6",
+      "nombre": "Morty Smith",
+      "dimensionOrigenId": "D3",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "consejo de ricks",
+      "nivelInteligencia": 4,
+      "descripcion": "Eric Stoltz Mask Morty."
+    },
+    {
+      "id": "C7",
+      "nombre": "Rick Sanchez",
+      "dimensionOrigenId": "D15",
+      "especieId": "S1",
+      "estado": "muerto",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 7,
+      "descripcion": "Rick Fascista, le gustan los regímenes autoritarios."
+    },
+    {
+      "id": "C8",
+      "nombre": "Morty Smith",
+      "dimensionOrigenId": "D15",
+      "especieId": "S1",
+      "estado": "muerto",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 4,
+      "descripcion": "Morty Fascista."
+    },
+    {
+      "id": "C9",
+      "nombre": "Summer Smith",
+      "dimensionOrigenId": "D1",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "familia smith",
+      "nivelInteligencia": 7,
+      "descripcion": "La hermana mayor."
+    },
+    {
+      "id": "C10",
+      "nombre": "Beth Smith",
+      "dimensionOrigenId": "D1",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "familia smith",
+      "nivelInteligencia": 8,
+      "descripcion": "Cirujana de caballos con problemas de abandono."
+    },
+    {
+      "id": "C11",
+      "nombre": "Jerry Smith",
+      "dimensionOrigenId": "D1",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "familia smith",
+      "nivelInteligencia": 3,
+      "descripcion": "Desempleado y un poco patético."
+    },
+    {
+      "id": "C12",
+      "nombre": "Hombre Pájaro",
+      "dimensionOrigenId": "D1",
+      "especieId": "S1",
+      "estado": "robot-sustituto",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 8,
+      "descripcion": "Mejor amigo de Rick, convertido en Phoenixperson."
+    },
+    {
+      "id": "C13",
+      "nombre": "Squanchy",
+      "dimensionOrigenId": "D1",
+      "especieId": "S2",
+      "estado": "desconocido",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 6,
+      "descripcion": "Le encanta squanchear en los armarios."
+    },
+    {
+      "id": "C14",
+      "nombre": "Mr. Meeseeks",
+      "dimensionOrigenId": "D1",
+      "especieId": "S4",
+      "estado": "muerto",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 5,
+      "descripcion": "¡Mírame! Soy el Señor Meeseeks."
+    },
+    {
+      "id": "C15",
+      "nombre": "Zeep Xanflorp",
+      "dimensionOrigenId": "D10",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 9,
+      "descripcion": "Científico engreído del Microverso."
+    },
+    {
+      "id": "C16",
+      "nombre": "Cornelius",
+      "dimensionOrigenId": "D1",
+      "especieId": "S6",
+      "estado": "muerto",
+      "afiliacion": "federación galáctica",
+      "nivelInteligencia": 7,
+      "descripcion": "Agente Gromflomite."
+    },
+    {
+      "id": "C17",
+      "nombre": "Unidad",
+      "dimensionOrigenId": "D1",
+      "especieId": "S9",
+      "estado": "vivo",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 10,
+      "descripcion": "Ex-amante de Rick, asimiladora de mundos."
+    },
+    {
+      "id": "C18",
+      "nombre": "Gearhead",
+      "dimensionOrigenId": "D1",
+      "especieId": "S10",
+      "estado": "vivo",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 6,
+      "descripcion": "Sabe mucho sobre las Gear Wars."
+    },
+    {
+      "id": "C19",
+      "nombre": "Rick Sanchez",
+      "dimensionOrigenId": "D2",
+      "especieId": "S2",
+      "estado": "vivo",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 9,
+      "descripcion": "Versión Cronenberg de Rick."
+    },
+    {
+      "id": "C20",
+      "nombre": "Morty Smith",
+      "dimensionOrigenId": "D2",
+      "especieId": "S2",
+      "estado": "vivo",
+      "afiliacion": "familia smith",
+      "nivelInteligencia": 4,
+      "descripcion": "Versión Cronenberg de Morty."
+    },
+    {
+      "id": "C21",
+      "nombre": "Rick Tóxico",
+      "dimensionOrigenId": "D7",
+      "especieId": "S1",
+      "estado": "muerto",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 9,
+      "descripcion": "Pura toxicidad emocional."
+    },
+    {
+      "id": "C22",
+      "nombre": "Morty Tóxico",
+      "dimensionOrigenId": "D7",
+      "especieId": "S1",
+      "estado": "muerto",
+      "afiliacion": "familia smith",
+      "nivelInteligencia": 4,
+      "descripcion": "Masa de autodesprecio."
+    },
+    {
+      "id": "C23",
+      "nombre": "Rick Sanchez",
+      "dimensionOrigenId": "D1",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "consejo de ricks",
+      "nivelInteligencia": 6,
+      "descripcion": "Rick Policía de la Ciudadela."
+    },
+    {
+      "id": "C24",
+      "nombre": "Morty Smith",
+      "dimensionOrigenId": "D1",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "consejo de ricks",
+      "nivelInteligencia": 5,
+      "descripcion": "Morty Policía corrupto."
+    },
+    {
+      "id": "C25",
+      "nombre": "Rick Sanchez",
+      "dimensionOrigenId": "D11",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 7,
+      "descripcion": "Rick con forma de silla."
+    },
+    {
+      "id": "C26",
+      "nombre": "Rick Sanchez",
+      "dimensionOrigenId": "D12",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 7,
+      "descripcion": "Rick con forma de pizza."
+    },
+    {
+      "id": "C27",
+      "nombre": "Rick Sanchez",
+      "dimensionOrigenId": "D13",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 7,
+      "descripcion": "Rick con forma de teléfono."
+    },
+    {
+      "id": "C28",
+      "nombre": "Jerry Prime",
+      "dimensionOrigenId": "D2",
+      "especieId": "S1",
+      "estado": "muerto",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 5,
+      "descripcion": "Sobreviviente post-apocalíptico rudo."
+    },
+    {
+      "id": "C29",
+      "nombre": "Space Beth",
+      "dimensionOrigenId": "D1",
+      "especieId": "S1",
+      "estado": "vivo",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 8,
+      "descripcion": "Clon (o no) rebelde de Beth."
+    },
+    {
+      "id": "C30",
+      "nombre": "Sleepy Gary",
+      "dimensionOrigenId": "D1",
+      "especieId": "S8",
+      "estado": "muerto",
+      "afiliacion": "independiente",
+      "nivelInteligencia": 6,
+      "descripcion": "Amante imaginario de Jerry."
+    }
   ],
   "inventosArtefactos": [
-    { "id": "I1", "nombre": "Portal Gun", "inventorId": "C1", "tipo": "dispositivo de viaje", "nivelPeligrosidad": 10, "descripcion": "Crea portales entre dimensiones y lugares." },
-    { "id": "I2", "nombre": "Nave Espacial de Rick", "inventorId": "C1", "tipo": "dispositivo de viaje", "nivelPeligrosidad": 9, "descripcion": "Hecha con basura en el garaje." },
-    { "id": "I3", "nombre": "Caja de Meeseeks", "inventorId": "C1", "tipo": "biotecnología", "nivelPeligrosidad": 7, "descripcion": "Genera seres para resolver tareas." },
-    { "id": "I4", "nombre": "Batería de Microverso", "inventorId": "C1", "tipo": "biotecnología", "nivelPeligrosidad": 9, "descripcion": "Universo cautivo para generar energía." },
-    { "id": "I5", "nombre": "Congelador de Tiempo", "inventorId": "C1", "tipo": "arma", "nivelPeligrosidad": 8, "descripcion": "Detiene el tiempo, arruina las líneas temporales." },
-    { "id": "I6", "nombre": "Rayo Encogedor", "inventorId": "C1", "tipo": "arma", "nivelPeligrosidad": 7, "descripcion": "Encoge cosas y personas." },
-    { "id": "I7", "nombre": "Casco de CI para Perros", "inventorId": "C1", "tipo": "biotecnología", "nivelPeligrosidad": 6, "descripcion": "Hace a los perros lo suficientemente listos para rebelarse." },
-    { "id": "I8", "nombre": "Gafas de Realidad Alternativa", "inventorId": "C1", "tipo": "dispositivo de viaje", "nivelPeligrosidad": 5, "descripcion": "Permite ver a tus yos de otras líneas temporales." },
-    { "id": "I9", "nombre": "Zapatos Magnéticos Especiales", "inventorId": "C1", "tipo": "objeto cotidiano absurdo", "nivelPeligrosidad": 3, "descripcion": "Para caminar por las paredes." },
-    { "id": "I10", "nombre": "Plumbus", "inventorId": "C18", "tipo": "objeto cotidiano absurdo", "nivelPeligrosidad": 1, "descripcion": "Todo el mundo tiene uno en casa." },
-    { "id": "I11", "nombre": "Miniverso Batería", "inventorId": "C15", "tipo": "biotecnología", "nivelPeligrosidad": 9, "descripcion": "Copia barata de la batería de Rick." },
-    { "id": "I12", "nombre": "Suero de Parásitos", "inventorId": "C1", "tipo": "biotecnología", "nivelPeligrosidad": 8, "descripcion": "Identifica falsos recuerdos." },
-    { "id": "I13", "nombre": "Pistola Antimateria", "inventorId": "C1", "tipo": "arma", "nivelPeligrosidad": 10, "descripcion": "Aniquilación pura." },
-    { "id": "I14", "nombre": "Botas de Portales", "inventorId": "C4", "tipo": "dispositivo de viaje", "nivelPeligrosidad": 10, "descripcion": "Portales pero en los pies. Muy útiles." },
-    { "id": "I15", "nombre": "Rayo Cronenberg", "inventorId": "C1", "tipo": "arma", "nivelPeligrosidad": 10, "descripcion": "Convierte el ADN de la Tierra en un desastre biológico." }
+    {
+      "id": "I1",
+      "nombre": "Portal Gun",
+      "inventorId": "C1",
+      "tipo": "dispositivo de viaje",
+      "nivelPeligrosidad": 10,
+      "descripcion": "Crea portales entre dimensiones y lugares."
+    },
+    {
+      "id": "I2",
+      "nombre": "Nave Espacial de Rick",
+      "inventorId": "C1",
+      "tipo": "dispositivo de viaje",
+      "nivelPeligrosidad": 9,
+      "descripcion": "Hecha con basura en el garaje."
+    },
+    {
+      "id": "I3",
+      "nombre": "Caja de Meeseeks",
+      "inventorId": "C1",
+      "tipo": "biotecnología",
+      "nivelPeligrosidad": 7,
+      "descripcion": "Genera seres para resolver tareas."
+    },
+    {
+      "id": "I4",
+      "nombre": "Batería de Microverso",
+      "inventorId": "C1",
+      "tipo": "biotecnología",
+      "nivelPeligrosidad": 9,
+      "descripcion": "Universo cautivo para generar energía."
+    },
+    {
+      "id": "I5",
+      "nombre": "Congelador de Tiempo",
+      "inventorId": "C1",
+      "tipo": "arma",
+      "nivelPeligrosidad": 8,
+      "descripcion": "Detiene el tiempo, arruina las líneas temporales."
+    },
+    {
+      "id": "I6",
+      "nombre": "Rayo Encogedor",
+      "inventorId": "C1",
+      "tipo": "arma",
+      "nivelPeligrosidad": 7,
+      "descripcion": "Encoge cosas y personas."
+    },
+    {
+      "id": "I7",
+      "nombre": "Casco de CI para Perros",
+      "inventorId": "C1",
+      "tipo": "biotecnología",
+      "nivelPeligrosidad": 6,
+      "descripcion": "Hace a los perros lo suficientemente listos para rebelarse."
+    },
+    {
+      "id": "I8",
+      "nombre": "Gafas de Realidad Alternativa",
+      "inventorId": "C1",
+      "tipo": "dispositivo de viaje",
+      "nivelPeligrosidad": 5,
+      "descripcion": "Permite ver a tus yos de otras líneas temporales."
+    },
+    {
+      "id": "I9",
+      "nombre": "Zapatos Magnéticos Especiales",
+      "inventorId": "C1",
+      "tipo": "objeto cotidiano absurdo",
+      "nivelPeligrosidad": 3,
+      "descripcion": "Para caminar por las paredes."
+    },
+    {
+      "id": "I10",
+      "nombre": "Plumbus",
+      "inventorId": "C18",
+      "tipo": "objeto cotidiano absurdo",
+      "nivelPeligrosidad": 1,
+      "descripcion": "Todo el mundo tiene uno en casa."
+    },
+    {
+      "id": "I11",
+      "nombre": "Miniverso Batería",
+      "inventorId": "C15",
+      "tipo": "biotecnología",
+      "nivelPeligrosidad": 9,
+      "descripcion": "Copia barata de la batería de Rick."
+    },
+    {
+      "id": "I12",
+      "nombre": "Suero de Parásitos",
+      "inventorId": "C1",
+      "tipo": "biotecnología",
+      "nivelPeligrosidad": 8,
+      "descripcion": "Identifica falsos recuerdos."
+    },
+    {
+      "id": "I13",
+      "nombre": "Pistola Antimateria",
+      "inventorId": "C1",
+      "tipo": "arma",
+      "nivelPeligrosidad": 10,
+      "descripcion": "Aniquilación pura."
+    },
+    {
+      "id": "I14",
+      "nombre": "Botas de Portales",
+      "inventorId": "C4",
+      "tipo": "dispositivo de viaje",
+      "nivelPeligrosidad": 10,
+      "descripcion": "Portales pero en los pies. Muy útiles."
+    },
+    {
+      "id": "I15",
+      "nombre": "Rayo Cronenberg",
+      "inventorId": "C1",
+      "tipo": "arma",
+      "nivelPeligrosidad": 10,
+      "descripcion": "Convierte el ADN de la Tierra en un desastre biológico."
+    }
   ],
   "viajesInterdimensionales": []
 }
