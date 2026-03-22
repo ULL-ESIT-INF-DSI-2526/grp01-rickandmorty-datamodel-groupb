@@ -8,9 +8,9 @@ describe('Tests de la clase ViajeInterdimensional', () => {
     const dimDestino = new Dimensiones("D-2", "Dimensión Cronenberg", EstadoDimensiones.CUARENTENA, 4, "Destino");
 
     const viaje: ViajeInterdimensional = {
-        id: "V-1",
-        origen: dimOrigen,
-        destino: dimDestino
+      id: "V-1",
+      origen: dimOrigen,
+      destino: dimDestino
     } as any;
   });
 });

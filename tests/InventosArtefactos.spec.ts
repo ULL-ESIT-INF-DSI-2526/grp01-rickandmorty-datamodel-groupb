@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { InventosArtefactos, TipoArtefacto } from '../src/InventosArtefactos'; 
+import { InventosArtefactos, TipoArtefacto } from '../src/InventosArtefactos';
 import { Personajes, Estados, Afiliaciones } from '../src/Personajes';
 import { Dimensiones, EstadoDimensiones } from '../src/Dimensiones';
 import { Especies, TipoEspecie } from '../src/Especies';
@@ -13,11 +13,11 @@ describe('Clase InventosArtefactos', () => {
 
   it('Debe crearse correctamente con datos válidos', () => {
     const portalGun = new InventosArtefactos("I1", "Portal Gun", "Permite viajar entre dimensiones", rick, TipoArtefacto.DISPOSITIVO_DE_VIAJE, 10);
-    
+
     expect(portalGun.getNombre()).toBe("Portal Gun");
     expect(portalGun.getInventor().getNombre()).toBe("Rick Sanchez");
     expect(portalGun.getTipo()).toBe(TipoArtefacto.DISPOSITIVO_DE_VIAJE);
-    expect(portalGun.getNivelPeligrosidad()).toBe(10); 
+    expect(portalGun.getNivelPeligrosidad()).toBe(10);
     expect(portalGun.getLocalizacionDespliegue()).toBeNull();
   });
 

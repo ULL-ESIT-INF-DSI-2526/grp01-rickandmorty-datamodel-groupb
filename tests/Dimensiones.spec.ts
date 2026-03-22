@@ -4,7 +4,7 @@ import { Dimensiones, EstadoDimensiones } from '../src/Dimensiones';
 describe('Clase Dimensiones', () => {
   it('Debe crearse correctamente con datos válidos', () => {
     const dimension = new Dimensiones("D1", "Tierra C-137", EstadoDimensiones.ACTIVA, 8, "Dimensión original de Rick");
-    
+
     expect(dimension.getId()).toBe("D1");
     expect(dimension.getNombre()).toBe("Tierra C-137");
     expect(dimension.getEstado()).toBe(EstadoDimensiones.ACTIVA);

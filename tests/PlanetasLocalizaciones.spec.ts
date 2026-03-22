@@ -8,7 +8,7 @@ describe('Clase PlanetasLocalizaciones', () => {
 
   it('Debe crearse correctamente enlazando la Dimensión', () => {
     const lugar = new PlanetasLocalizaciones("L1", "Citadel of Ricks", TiposPlanetas.ESTACIONESPACIAL, dimTest, 50000, "Sede del Consejo");
-    
+
     expect(lugar.getNombre()).toBe("Citadel of Ricks");
     expect(lugar.getTipoPlaneta()).toBe(TiposPlanetas.ESTACIONESPACIAL);
     expect(lugar.getDimension().getId()).toBe("D1");

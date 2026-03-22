@@ -11,7 +11,7 @@ describe('Clase Personajes', () => {
 
   it('Debe crearse correctamente enlazando Especie y Dimensión', () => {
     const rick = new Personajes("P1", "Rick Sanchez", espTest, dimTest, Estados.VIVO, Afiliaciones.INDEPENDIENTE, 10, "Genio");
-    
+
     expect(rick.getNombre()).toBe("Rick Sanchez");
     expect(rick.getEspecie().getNombre()).toBe("Humano");
     expect(rick.getDimensionOrigen().getId()).toBe("D1");

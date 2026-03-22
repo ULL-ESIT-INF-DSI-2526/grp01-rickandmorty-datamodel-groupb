@@ -4,7 +4,7 @@ import { Especies, TipoEspecie } from '../src/Especies';
 describe('Clase Especies', () => {
   it('Debe crearse correctamente con datos válidos', () => {
     const especie = new Especies("E1", "Cromulon", "Sector Cygnus", TipoEspecie.AMORFO, 1000000, "Cabezas gigantes que exigen música");
-    
+
     expect(especie.getId()).toBe("E1");
     expect(especie.getNombre()).toBe("Cromulon");
     expect(especie.getOrigen()).toBe("Sector Cygnus");
